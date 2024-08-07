@@ -6589,12 +6589,103 @@ License: For each use you must have a valid license purchased only from above li
 
 
 							<!--Right Section-->
-							<div class="col-12 col-xxl-8 mt-10 mt-xxl-0 h-100 overflow-scroll">
+							<div class="col-12 col-xxl-8 mt-10 mt-xxl-0 h-100 overflow-scroll right-section">
 
-								<div class="card card-flush p-0">
-									<p class="text-start m-2  fw-bold  fs-8"> <span
-											class="badge badge-light-success py-3 px-4 fs-5 ">Franchise Admin</span></p>
-									<div class="card-body p-0 ">
+								<!-- Franchise Admin Action -->
+								<div class="card card-flush p-0 position-relative d-none franchise-admin-action-card">
+									<!-- cross -->
+									<button class="text-white bg-danger border-0 top-0 end-0 fs-5 position-absolute rounded-circle" onclick="franchiseAdminActionClose(event)">
+										*
+									</button>
+									<p class="text-start m-2  fw-bold  fs-8">
+										<span class="badge badge-light-success py-3 px-4 fs-5 ">Franchise Admin</span>
+									</p>
+									<div class="card-body p-3 container-fluid">
+										<div class="row">
+											<div class="col-7">
+												<div class="d-flex flex-column">
+													<div class="d-flex justify-content-between align-items-center">
+														<a href="" class="text-gray-800 fw-bold text-capitalize">
+															Admin ID :
+														</a>
+														<a class="text-gray-800 fw-bold text-hover-primary">
+															#254125544
+														</a>
+													</div>
+													<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													<div class="d-flex justify-content-between align-items-center">
+														<a href="" class="text-gray-800 fw-bold text-capitalize">
+															Admin Name :
+														</a>
+														<a class="text-gray-800 fw-bold text-hover-primary">
+															Meridian Employee
+														</a>
+													</div>
+													<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													<div class="d-flex justify-content-between align-items-center">
+														<a href="" class="text-gray-800 fw-bold text-capitalize">
+															Email :
+														</a>
+														<a class="text-gray-800 fw-bold text-hover-primary">
+															meridian@test.com
+														</a>
+													</div>
+													<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													<div class="d-flex justify-content-between align-items-center">
+														<a href="" class="text-gray-800 fw-bold text-capitalize">
+															Role :
+														</a>
+														<a class="text-gray-800 fw-bold text-hover-primary">
+															Franchise Owner
+														</a>
+													</div>
+													<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													<div class="d-flex justify-content-between align-items-center">
+														<a href="" class="text-gray-800 fw-bold text-capitalize">
+															Login Status :
+														</a>
+														<a class="text-gray-800 fw-bold text-hover-primary">
+															Enabled
+														</a>
+													</div>
+													<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													<div class="d-flex justify-content-between align-items-center">
+														<a href="" class="text-gray-800 fw-bold text-capitalize">
+															Password Updated :
+														</a>
+														<a class="text-gray-800 fw-bold text-hover-primary">
+															Last updated on 09/10/2020 | 12:30 pm 
+														</a>
+													</div>
+													<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													<div class="d-flex justify-content-between align-items-center">
+														<a href="" class="text-gray-800 fw-bold text-capitalize">
+															Active Status :
+														</a>
+														<span class="badge py-3 px-4 fs-7 badge-light-primary">
+															ACTIVE
+														</span>
+													</div>
+													<hr class="my-3" style="border-top: 1px dashed #777777;" />
+												</div>
+											</div>
+											<div class="col-5 d-flex">
+												<div class="d-flex w-100 my-auto justify-content-between franchise-admin-action-buttons">
+													<button class="badge py-3 px-4 fs-7 badge-light-danger border-0 mb-3 d-flex gap-1">Invite Admin</button>
+													<button class="badge py-3 px-4 fs-7 badge-light-danger border-0 mb-3 d-flex gap-1">Impersonate</button>
+													<button class="badge py-3 px-4 fs-7 badge-light-danger border-0 mb-3 d-flex gap-1">Deactivate</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Franchise Admin  -->
+								<div class="card card-flush p-0 right-card">
+									<p class="text-start m-2  fw-bold  fs-8">
+										<span class="badge badge-light-success py-3 px-4 fs-5 ">Franchise Admin</span>
+									</p>
+									<div class="card-body p-0 franchise-admin-block">
 										<!--begin::Table-->
 										<div class="overflow-scroll">
 											<table class="table align-middle table-row-dashed fs-6 gy-3 mb-0 ">
@@ -6664,7 +6755,7 @@ License: For each use you must have a valid license purchased only from above li
 															<div class="d-flex gap-2">
 															<div class="text-success  "><i class="fa-solid fa-file"></i>
 															</div>
-															<div class="text-danger"><i class="fa-solid fa-eye"></i>
+															<div class="text-danger"><i class="fa-solid fa-eye" onclick="franchiseAdminActionOpen(event)"></i>
 															</div>
 															<div class="text-danger"><i class="fa-solid fa-xmark"></i>
 															</div>
@@ -6692,7 +6783,7 @@ License: For each use you must have a valid license purchased only from above li
 															<div class="d-flex gap-2">
 															<div class="text-success"><i class="fa-solid fa-file"></i>
 															</div>
-															<div class="text-danger"><i class="fa-solid fa-eye"></i>
+															<div class="text-danger"><i class="fa-solid fa-eye" onclick="franchiseAdminActionOpen(event)"></i>
 															</div>
 															<div class="text-danger"><i class="fa-solid fa-xmark"></i>
 															</div>
@@ -6719,7 +6810,7 @@ License: For each use you must have a valid license purchased only from above li
 														<td class="d-flex gap-2">
 															<div class="text-success"><i class="fa-solid fa-file"></i>
 															</div>
-															<div class="text-danger"><i class="fa-solid fa-eye"></i>
+															<div class="text-danger"><i class="fa-solid fa-eye" onclick="franchiseAdminActionOpen(event)"></i>
 															</div>
 															<div class="text-danger"><i class="fa-solid fa-xmark"></i>
 															</div>
@@ -6732,6 +6823,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Table body-->
 											</table>
 										</div>
+										<!-- button -->
 										<button
 											class="badge ms-auto py-3 px-4 fs-7 badge-light-danger border-0 mb-3 d-flex gap-1"
 											data-bs-toggle="modal" data-bs-target="#kt_modal_new_target1">
@@ -6742,6 +6834,7 @@ License: For each use you must have a valid license purchased only from above li
 											</i>
 											<div>Add Franchise Admin</div>
 										</button>
+										<!-- Franchise admin modal  -->
 										<div class="modal fade" id="kt_modal_new_target1" tabindex="-1"
 											aria-hidden="true">
 
@@ -6838,7 +6931,167 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 
 
-								<div class="card card-flush mt-4">
+								<!-- Revenue Report Action  -->
+								<div class="card card-flush p-0 position-relative d-none revenue-report-action-card">
+									<!-- cross -->
+									<button class="text-white bg-danger border-0 top-0 end-0 fs-5 position-absolute rounded-circle"
+										onclick="revenueReportActionClose(event)">
+										*
+									</button>
+									<p class="text-start m-2  fw-bold  fs-8">
+										<span class="badge badge-light-success py-3 px-4 fs-5 ">Revenue Report</span>
+									</p>
+									<div class="card-body p-3 container-fluid">
+										<div class="row">
+											<div class="text-gray-800 fw-bold col-10">
+												<div class="row">
+													<div class="col-6">
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="text-capitalize">Email: </div>
+															<a class="text-gray-800 fw-bold text-hover-primary">meridian@test.com</a>
+														</div>
+														<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													</div>
+													<div class="col-6">
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="text-capitalize">Revenue Inside :</div>
+															<div class="text-hover-primary">$ 320.00</div>
+														</div>
+														<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													</div>
+													<div class="col-6">
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="text-capitalize">Revenue Inside :</div>
+															<div class="text-hover-primary" id="revenue-inside">$ 0.00</div>
+														</div>
+														<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													</div>
+													<div class="col-6">
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="text-capitalize">Royalty (USD) :</div>
+															<div class="text-hover-primary" >$ 0.00</div>
+														</div>
+														<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													</div>
+													<div class="col-6">
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="text-capitalize">Marketing Fee :</div>
+															<div class="text-hover-primary" >$ 0.00</div>
+														</div>
+														<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													</div>
+													<div class="col-6">
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="text-capitalize">Marketing (USD) :</div>
+															<div class="text-hover-primary">$ 0.00</div>
+														</div>
+														<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													</div>
+													<div class="col-6">
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="text-capitalize">Revenue Outside Territory :</div>
+															<div class="text-hover-primary" >$ 0.00</div>
+														</div>
+														<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													</div>
+													<div class="col-6">
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="text-capitalize">Total Revenue :</div>
+															<div class="text-hover-primary">$ 0.00</div>
+														</div>
+														<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													</div>
+													<div class="col-6">
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="text-capitalize">End Of Month Receivables :</div>
+															<div class="text-hover-primary" >$ 0.00</div>
+														</div>
+														<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													</div>
+													<div class="col-6">
+														<div class="d-flex justify-content-between align-items-center">
+															<div class="text-capitalize">Active Status :</div>
+															<span class="badge py-3 px-4 fs-7 badge-light-primary">
+																ACTIVE
+															</span>
+														</div>
+														<hr class="my-3" style="border-top: 1px dashed #777777;" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="justify-content-between row">
+											<div class="col d-flex align-items-center gap-3">
+												<div>Auto Approved will be in 2 days</div>
+												<button class="badge py-3 px-4 fs-7 badge-light-danger border-0 d-flex gap-1">Approve</button>
+											</div>
+											<div class="col d-flex align-content-center justify-content-end">
+												<button class="badge py-3 px-4 fs-7 badge-light-danger border-0 d-flex gap-1">Invite Admin</button>
+											</div>
+										</div>
+
+										<hr class="my-4" style="border-top: 2px solid #777777;" />
+										<!--begin::Table-->
+										<div class="overflow-scroll">
+											<table class="table align-middle fs-7 table-row-dashed gy-3 mb-0 ">
+												<!--begin::Table head-->
+												<thead>
+													<!--begin::Table row-->
+													<tr class="text-start fw-bold Wtext-uppercase gs-0">
+														<th class="min-w-20px">Txn. ID</th>
+														<th class="min-w-60px">Date & Time</th>
+														<th class="min-w-60px">Revenue</th>
+														<th class="min-w-60px">Receivables</th>
+														<th class="min-w-60px">Deposit</th>
+														<th class="min-w-60px">Withdrawal</th>
+													</tr>
+													<!--end::Table row-->
+												</thead>
+												<!--end::Table head-->
+												<!--begin::Table body-->
+												<tbody class="text-gray-800 fw-semibold">
+													<tr>
+														<td>
+															<a href="" class="text-gray-800 text-hover-primary ">#1644944649</a>
+														</td>
+														<td>1/8/2020 | 10:30</td>
+														<td>$ 460.00</td>
+														<td>$ 120.00</td>
+														<td>$ 120.00</td>
+														<td>$ 120.00</td>
+													</tr>
+													<tr>
+														<td>
+															<a href="" class="text-gray-800 text-hover-primary ">#1644944649</a>
+														</td>
+														<td>1/8/2020 | 10:30</td>
+														<td>$ 460.00</td>
+														<td>$ 120.00</td>
+														<td>$ 120.00</td>
+														<td>$ 120.00</td>
+													</tr>
+													<tr>
+														<td>
+															<a href="" class="text-gray-800 text-hover-primary ">#1644944649</a>
+														</td>
+														<td>1/8/2020 | 10:30</td>
+														<td>$ 460.00</td>
+														<td>$ 120.00</td>
+														<td>$ 120.00</td>
+														<td>$ 120.00</td>
+													</tr>
+										
+										
+												</tbody>
+												<!--end::Table body-->
+											</table>
+										</div>
+										<!-- end Table -->
+									</div>
+								</div>
+
+								<!-- Revenue Report  -->
+								<div class="card card-flush mt-4 right-card">
 									<p class="text-start m-2  fw-bold  fs-8"> <span
 											class="badge badge-light-success py-3 px-4 fs-5 ">Revenue Report</span></p>
 									<!--begin::Header-->
@@ -6962,7 +7215,7 @@ License: For each use you must have a valid license purchased only from above li
 														<td class="">$ 60.00</td>
 														<td class="">$ 60.00</td>
 														<td class=" text-danger">Needs Approval</td>
-														<td class=""><i class="fa-solid fa-eye"></i></td>
+														<td class=""><i class="fa-solid fa-eye" onclick="revenueReportActionOpen(event)"></i></td>
 													</tr>
 													<tr>
 														<td>
@@ -6981,7 +7234,7 @@ License: For each use you must have a valid license purchased only from above li
 														<td class="">$ 260.00</td>
 														<td class="">$ 350.00</td>
 														<td class=" text-primary">Auto Approved</td>
-														<td class=""><i class="fa-solid fa-eye"></i></td>
+														<td class=""><i class="fa-solid fa-eye" onclick="revenueReportActionOpen(event)"></i></td>
 													</tr>
 													<tr>
 														<td>
@@ -7000,7 +7253,7 @@ License: For each use you must have a valid license purchased only from above li
 														<td class="">$ 430.00</td>
 														<td class="">$ 500.00</td>
 														<td class=" text-primary">Approved</td>
-														<td class=""><i class="fa-solid fa-eye"></i></td>
+														<td class=""><i class="fa-solid fa-eye" onclick="revenueReportActionOpen(event)"></i></td>
 													</tr>
 												</tbody>
 												<!--end::Table body-->
@@ -7012,8 +7265,124 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 
 
+								<!-- Subscription Action  -->
+								<div class="card card-flush p-0 position-relative d-none subscription-action-card">
+									<!-- cross -->
+									<button class="text-white bg-danger border-0 top-0 end-0 fs-5 position-absolute rounded-circle"
+										onclick="subscriptionActionClose(event)">
+										*
+									</button>
+									<p class="text-start m-2  fw-bold  fs-8">
+										<span class="badge badge-light-success py-3 px-4 fs-5 ">Subscription</span>
+									</p>
+									<div class="card-body p-3 text-gray-800 fw-bold container-fluid">
+										<div class="row">
+											<div class="col-7">
+												<div class="d-flex justify-content-between align-items-center">
+													<div class="text-capitalize">Subscription Plan: </div>
+													<div class=" text-hover-primary">Standard</div>
+												</div>
+												<hr class="my-3" style="border-top: 1px dashed #777777;" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-7">
+												<div class="d-flex justify-content-between align-items-center">
+													<div class="text-capitalize">Type: </div>
+													<div class=" text-hover-primary">Standard</div>
+												</div>
+												<hr class="my-3" style="border-top: 1px dashed #777777;" />
+											</div>
+										</div>
+										<div class="row">
+
+											<div class="col-7">
+												<div class="d-flex justify-content-between align-items-center">
+													<div class="text-capitalize">Start Date: </div>
+													<div class=" text-hover-primary">10/10/2020</div>
+												</div>
+												<hr class="my-3" style="border-top: 1px dashed #777777;" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-7">
+												<div class="d-flex justify-content-between align-items-center">
+													<div class="text-capitalize">End Date: </div>
+													<div class=" text-hover-primary">10/10/2020</div>
+												</div>
+												<hr class="my-3" style="border-top: 1px dashed #777777;" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-7">
+												<div class="d-flex justify-content-between align-items-center">
+													<div class="text-capitalize">Description: </div>
+													<div class=" text-hover-primary">Lorem ipsum is simply dummy text.</div>
+												</div>
+												<hr class="my-3" style="border-top: 1px dashed #777777;" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-7">
+												<div class="d-flex justify-content-between align-items-center">
+													<div class="text-capitalize">Added Email: </div>
+													<div class="d-flex flex-column">
+														<div class="d-flex gap-2">
+															<a href="" class="text-gray-800 fw-bold text-hover-primary">subemail@brick4kidz.com</a>
+															<div><img
+																	src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdElEQVR4nGNgoBTc1/KSuKnp5wLCt7V8m29p+Z4BYRAbJn5Xx1ccQ+MtLd/aW5p+7/BiLd9aBqqBG2o+IoRsvKHmI4LpVBUP0dtafv/x4VsqHqKjGrVICJwrWqFChEIVpAZrXN7W9J0BS2ro+LaW3zSqpBgAhJbg03CqoP0AAAAASUVORK5CYII=">
+															</div>
+														</div>
+														<div class="d-flex gap-2">
+															<a href="" class="text-gray-800 fw-bold text-hover-primary">subemail@brick4kidz.com</a>
+															<div><img
+																	src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdElEQVR4nGNgoBTc1/KSuKnp5wLCt7V8m29p+Z4BYRAbJn5Xx1ccQ+MtLd/aW5p+7/BiLd9aBqqBG2o+IoRsvKHmI4LpVBUP0dtafv/x4VsqHqKjGrVICJwrWqFChEIVpAZrXN7W9J0BS2ro+LaW3zSqpBgAhJbg03CqoP0AAAAASUVORK5CYII=">
+															</div>
+														</div>
+													</div>
+												</div>
+												<hr class="my-3" style="border-top: 1px dashed #777777;" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-7">
+												<div class="d-flex justify-content-between align-items-center">
+													<div class="text-capitalize">Subscription Amount: </div>
+													<div class=" text-hover-primary">$ 75.00</div>
+												</div>
+												<hr class="my-3" style="border-top: 1px dashed #777777;" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-7">
+												<div class="d-flex justify-content-between align-items-center">
+													<div class="text-capitalize">Status: </div>
+													<span class="badge py-3 px-4 fs-7 badge-light-primary">
+														ACTIVE
+													</span>
+												</div>
+												<hr class="my-3" style="border-top: 1px dashed #777777;" />
+											</div>
+										</div>
+										<div class="row mt-5">
+											<div class="col-10 d-flex">
+												<div class="shadow-sm py-2 px-2 rounded-1 ms-auto d-flex">
+													<div class="ms-auto me-2">System Action: </div>
+													<div class="form-check form-switch my-auto">
+														<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+													</div>
+												</div>
+											</div>
+											<div class="col-2 d-flex">
+												<button class="badge py-3 px-4 fs-7 badge-light-danger border-0 my-auto d-flex gap-1">Deactivate</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
 								<!--Subscription-->
-								<div class="card mt-4">
+								<div class="card mt-4 right-card">
 									<p class="text-start m-2  fw-bold  fs-8"> <span
 											class="badge py-4 px-5  fs-5 badge-light-success">Subscription</span></p>
 									<!--begin::Header-->
@@ -7194,7 +7563,7 @@ License: For each use you must have a valid license purchased only from above li
 																</td>
 																<td class="text-danger  gap-1">
 																	<div class="d-flex gap-2">
-																		<div>ey</div>
+																		<div onclick="subscriptionActionOpen(event)">ey</div>
 																		<div>Cr</div>
 																	</div>
 																</td>
@@ -7214,7 +7583,7 @@ License: For each use you must have a valid license purchased only from above li
 																</td>
 																<td class="text-danger  gap-1">
 																	<div class="d-flex gap-2">
-																		<div>ey</div>
+																		<div onclick="subscriptionActionOpen(event)">ey</div>
 																		<div>Cr</div>
 																	</div>
 																</td>
@@ -7517,7 +7886,7 @@ License: For each use you must have a valid license purchased only from above li
 
 
 								<!--Sub Franchise-->
-								<div class="card card-flush mt-2 p-0">
+								<div class="card card-flush mt-2 p-0 right-card">
 									<p class="text-start m-2  fw-bold  fs-8"> <span
 											class="badge py-3 px-4 fs-5 badge-light-success">Sub Franchise</span></p>
 
@@ -7609,7 +7978,7 @@ License: For each use you must have a valid license purchased only from above li
 
 
 								<!--Notes-->
-								<div class="card card-flush mt-4 p-0">
+								<div class="card card-flush mt-4 p-0 right-card">
 									<p class="text-start m-2  fw-bold  fs-8"> <span
 											class="badge py-3 px-4 fs-5 badge-light-success">Notes</span></p>
 
@@ -7768,6 +8137,72 @@ License: For each use you must have a valid license purchased only from above li
 		<!--end::Modals-->
 		<!--begin::Javascript-->
 		<script>
+
+			//jb functions
+			function hideRightSection(){
+				const rigthSections = document.querySelectorAll(".right-card");
+				rigthSections.forEach((ele) => ele.style.display = 'none');
+			}
+
+			function displayRightSection(){
+				const rigthSections = document.querySelectorAll(".right-card");
+				rigthSections.forEach((ele) => ele.style.display = 'block');
+			}
+
+			//Franchise Admin Action
+			function franchiseAdminActionClose(event){
+				//Prevent from reloading
+				if (event) event.preventDefault();
+
+				const franchiseAdminActionBlock = document.querySelector(".franchise-admin-action-card");
+				franchiseAdminActionBlock.classList.add("d-none");
+				displayRightSection();
+			}
+
+			function franchiseAdminActionOpen(event){
+				//Prevent from reloading
+				if(event) event.preventDefault();
+
+				const franchiseAdminActionBlock = document.querySelector(".franchise-admin-action-card");
+				franchiseAdminActionBlock.classList.remove("d-none");
+				hideRightSection();
+			}
+
+			//Revenue Report Action
+			function revenueReportActionOpen(event){
+				if(event) event.preventDefault();
+
+				const revenueReportActionBlock = document.querySelector(".revenue-report-action-card");
+				revenueReportActionBlock.classList.remove('d-none');
+				hideRightSection();
+			}
+
+			function revenueReportActionClose(event) {
+				if (event) event.preventDefault();
+
+				const revenueReportActionBlock = document.querySelector(".revenue-report-action-card");
+				revenueReportActionBlock.classList.add('d-none');
+				displayRightSection();
+			}
+
+
+			//Subscription Action
+			function subscriptionActionOpen(event) {
+				if (event) event.preventDefault();
+
+				const subscriptionActionBlock = document.querySelector(".subscription-action-card");
+				subscriptionActionBlock.classList.remove('d-none');
+				hideRightSection();
+			}
+
+			function subscriptionActionClose(event) {
+				if (event) event.preventDefault();
+
+				const subscriptionActionBlock = document.querySelector(".subscription-action-card");
+				subscriptionActionBlock.classList.add('d-none');
+				displayRightSection();
+			}
+
 
 			function addEmailBox(event) {
 				//Prevent from reloading
