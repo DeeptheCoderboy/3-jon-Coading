@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Toolbar</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .toolbar {
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .toolbar .dropdown-toggle::after {
+            display: none;
+        }
+        .toolbar button, .toolbar .dropdown-toggle {
+            margin: 0 5px;
+        }
+        .toolbar .dropdown-menu {
+            min-width: 8rem;
+        }
+        .editor-container {
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .editor {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            resize: none;
+        }
+        .active-format {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-3">
+        <div class="toolbar">
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" id="formatBlockDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Normal
+                </button>
+                <div class="dropdown-menu" aria-labelledby="formatBlockDropdown">
+                    <a class="dropdown-item" href="#" onclick="format('formatBlock', 'p')">Normal</a>
+                    <a class="dropdown-item" href="#" onclick="format('formatBlock', 'h1')">Heading 1</a>
+                    <a class="dropdown-item" href="#" onclick="format('formatBlock', 'h2')">Heading 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" id="fontNameDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sailec Light
+                </button>
+                <div class="dropdown-menu" aria-labelledby="fontNameDropdown">
+                    <a class="dropdown-item" href="#" onclick="format('fontName', 'Sailec Light')">Sailec Light</a>
+                    <a class="dropdown-item" href="#" onclick="format('fontName', 'Arial')">Arial</a>
+                    <a class="dropdown-item" href="#" onclick="format('fontName', 'Times New Roman')">Times New Roman</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" id="fontSizeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Font Size
+                </button>
+                <div class="dropdown-menu" aria-labelledby="fontSizeDropdown">
+                    <a class="dropdown-item" href="#" onclick="format('fontSize', '1')">1</a>
+                    <a class="dropdown-item" href="#" onclick="format('fontSize', '2')">2</a>
+                    <a class="dropdown-item" href="#" onclick="format('fontSize', '3')">3</a>
+                    <a class="dropdown-item" href="#" onclick="format('fontSize', '4')">4</a>
+                    <a class="dropdown-item" href="#" onclick="format('fontSize', '5')">5</a>
+                    <a class="dropdown-item" href="#" onclick="format('fontSize', '6')">6</a>
+                    <a class="dropdown-item" href="#" onclick="format('fontSize', '7')">7</a>
+                </div>
+            </div>
+            <button id="boldBtn" class="btn btn-light" onclick="format('bold')"><b>B</b></button>
+            <button id="italicBtn" class="btn btn-light" onclick="format('italic')"><i>I</i></button>
+            <button id="underlineBtn" class="btn btn-light" onclick="format('underline')"><u>U</u></button>
+            <button id="leftBtn" class="btn btn-light" onclick="format('justifyLeft')"><i class="fas fa-align-left"></i></button>
+            <button id="centerBtn" class="btn btn-light" onclick="format('justifyCenter')"><i class="fas fa-align-center"></i></button>
+            <button id="rightBtn" class="btn btn-light" onclick="format('justifyRight')"><i class="fas fa-align-right"></i></button>
+            <button id="justifyBtn" class="btn btn-light" onclick="format('justifyFull')"><i class="fas fa-align-justify"></i></button>
+            <button id="linkBtn" class="btn btn-light" onclick="format('createLink', prompt('Enter the URL:'))"><i class="fas fa-link"></i></button>
+            <button id="imageBtn" class="btn btn-light" onclick="format('insertImage', prompt('Enter the image URL:'))"><i class="fas fa-image"></i></button>
+            <button id="tableBtn" class="btn btn-light" onclick="insertTable()"><i class="fas fa-table"></i></button>
+            <button id="codeBtn" class="btn btn-light" onclick="format('insertHTML', '<code></code>')"><i class="fas fa-code"></i></button>
+            <button id="quoteBtn" class="btn btn-light" onclick="format('formatBlock', 'blockquote')"><i class="fas fa-quote-right"></i></button>
+        </div>
+        <div class="editor-container">
+            <iframe id="editor" class="editor"></iframe>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const editor = document.getElementById('editor').contentDocument || document.getElementById('editor').contentWindow.document;
+            editor.designMode = "on";
+
+            // Add event listener to check for selection changes and update button states
+            editor.addEventListener('selectionchange', updateButtonStates);
+
+            window.format = function(command, value = null) {
+                editor.execCommand(command, false, value);
+                updateButtonStates();
+            };
+
+            window.insertTable = function() {
+                const rows = prompt('Enter the number of rows:');
+                const cols = prompt('Enter the number of columns:');
+                if (rows > 0 && cols > 0) {
+                    let table = '<table border="1">';
+                    for (let r = 0; r < rows; r++) {
+                        table += '<tr>';
+                        for (let c = 0; c < cols; c++) {
+                            table += '<td>&nbsp;</td>';
+                        }
+                        table += '</tr>';
+                    }
+                    table += '</table>';
+                    format('insertHTML', table);
+                }
+            };
+
+            function updateButtonStates() {
+                const commands = ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'];
+                commands.forEach(command => {
+                    const button = document.getElementById(command + 'Btn');
+                    if (editor.queryCommandState(command)) {
+                        button.classList.add('active-format');
+                    } else {
+                        button.classList.remove('active-format');
+                    }
+                });
+
+                // Update font family dropdown
+                const fontName = editor.queryCommandValue('fontName');
+                const fontNameDropdown = document.getElementById('fontNameDropdown');
+                fontNameDropdown.innerHTML = fontName || 'Sailec Light';
+
+                // Update font size dropdown
+                const fontSize = editor.queryCommandValue('fontSize');
+                const fontSizeDropdown = document.getElementById('fontSizeDropdown');
+                fontSizeDropdown.innerHTML = fontSize || 'Font Size';
+            }
+        });
+    </script>
+</body>
+</html>
