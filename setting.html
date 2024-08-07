@@ -38,45 +38,53 @@ License: For each use you must have a valid license purchased only from above li
 			color: white;
 			background-color: rgb(219, 42, 78)
 		}
+
 		.toolbar {
-            border: 1px solid #ccc;
-            padding: 5px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            overflow-x: scroll;
-        }
-        .toolbar .dropdown-toggle::after {
-            display: none;
-        }
-        .toolbar button, .toolbar .dropdown-toggle {
-            margin: 0 5px;
-        }
-        .toolbar .dropdown-menu {
-            min-width: 8rem;
-        }
-        .editor-container {
-            margin-top: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .editor {
-            width: 100%;
-            height: 200px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            outline: none;
-            resize: none;
-        }
-        .active-format {
-            background-color: #e9ecef;
-        }
+			border: 1px solid #ccc;
+			padding: 5px;
+			border-radius: 5px;
+			display: flex;
+			align-items: center;
+			overflow-x: scroll;
+		}
+
+		.toolbar .dropdown-toggle::after {
+			display: none;
+		}
+
+		.toolbar button,
+		.toolbar .dropdown-toggle {
+			margin: 0 5px;
+		}
+
+		.toolbar .dropdown-menu {
+			min-width: 8rem;
+		}
+
+		.editor-container {
+			margin-top: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		.editor {
+			width: 100%;
+			height: 200px;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			outline: none;
+			resize: none;
+		}
+
+		.active-format {
+			background-color: #e9ecef;
+		}
 	</style>
-	
-        
-       
-   
+
+
+
+
 	<link rel="canonical" href="http://index.html" />
 	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
 	<!--begin::Fonts(mandatory for all pages)-->
@@ -89,7 +97,7 @@ License: For each use you must have a valid license purchased only from above li
 	<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
 	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="styles/setting.css" rel="stylesheet" type="text/css"/>
+	<link href="styles/setting.css" rel="stylesheet" type="text/css" />
 	<!--end::Global Stylesheets Bundle-->
 	<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
 </head>
@@ -5672,144 +5680,380 @@ License: For each use you must have a valid license purchased only from above li
 
 							<!--Left Section-->
 							<div class="col-xl-6 col-12 h-100 bg-gray-900">
-								<div class="card card-flush h-100 d-flex flex-column overflow-scroll mb-3 position-relative mx-0">
-									<p class="text-start m-2 fw-bold "> <span class="badge py-3 px-4 fs-5 badge-light-success">General Setup</span>
+								<div
+									class="card card-flush h-100 d-flex flex-column overflow-scroll mb-3 position-relative mx-0">
+									<p class="text-start m-2 fw-bold "> <span
+											class="badge py-3 px-4 fs-5 badge-light-success">General Setup</span>
 									</p>
 									<form>
 
-	             
-                       <div class="row">
-                      <div class="p-8">   
-                    <div class="mb-3">
-                    <label for="additionalFeeLabel" class="form-label">Additional Fee Label</label>
-                    <input type="text" class="form-control" id="additionalFeeLabel" placeholder="Enter additional fee label">
-                    </div>
-                
-                            <div class="form-group">
-                                <div class="d-flex justify-content-between">
-                                <label for="policy">Policy</label>
-								<div class="d-flex">
-								<label class="form-check-label"
-								for="flexSwitchCheckDefault me-2">Use B4K Policy</label>
-									<div class="form-check form-switch my-auto">
-																		
+
+										<div class="row">
+											<div class="p-8">
+												<div class="mb-3">
+													<label for="additionalFeeLabel" class="form-label">Additional Fee
+														Label</label>
+													<input type="text" class="form-control" id="additionalFeeLabel"
+														placeholder="Enter additional fee label">
+												</div>
+
+												<div class="form-group">
+													<div class="d-flex justify-content-between">
+														<label for="policy">Policy</label>
+														<div class="d-flex">
+															<label class="form-check-label"
+																for="flexSwitchCheckDefault me-2">Use B4K Policy</label>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+
+												<div class=" mt-3">
+													<div class="toolbar ">
+														<div class="dropdown">
+															<button class="btn btn-light dropdown-toggle" type="button"
+																id="formatBlockDropdown" data-toggle="dropdown"
+																aria-haspopup="true" aria-expanded="false">
+																Normal
+															</button>
+															<div class="dropdown-menu"
+																aria-labelledby="formatBlockDropdown">
+																<a class="dropdown-item" href="#"
+																	onclick="format('formatBlock', 'p')">Normal</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('formatBlock', 'h1')">Heading 1</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('formatBlock', 'h2')">Heading 2</a>
+															</div>
+														</div>
+														<div class="dropdown">
+															<button class="btn btn-light dropdown-toggle" type="button"
+																id="fontNameDropdown" data-toggle="dropdown"
+																aria-haspopup="true" aria-expanded="false">
+																Sailec Light
+															</button>
+															<div class="dropdown-menu"
+																aria-labelledby="fontNameDropdown">
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontName', 'Sailec Light')">Sailec
+																	Light</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontName', 'Arial')">Arial</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontName', 'Times New Roman')">Times
+																	New Roman</a>
+															</div>
+														</div>
+														<div class="dropdown">
+															<button class="btn btn-light dropdown-toggle" type="button"
+																id="fontSizeDropdown" data-toggle="dropdown"
+																aria-haspopup="true" aria-expanded="false">
+																Font Size
+															</button>
+															<div class="dropdown-menu"
+																aria-labelledby="fontSizeDropdown">
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '1')">1</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '2')">2</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '3')">3</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '4')">4</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '5')">5</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '6')">6</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '7')">7</a>
+															</div>
+														</div>
+														<button id="boldBtn" class="btn btn-light"
+															onclick="format('bold')"><b>B</b></button>
+														<button id="italicBtn" class="btn btn-light"
+															onclick="format('italic')"><i>I</i></button>
+														<button id="underlineBtn" class="btn btn-light"
+															onclick="format('underline')"><u>U</u></button>
+														<button id="leftBtn" class="btn btn-light"
+															onclick="format('justifyLeft')"><i
+																class="fas fa-align-left"></i></button>
+														<button id="centerBtn" class="btn btn-light"
+															onclick="format('justifyCenter')"><i
+																class="fas fa-align-center"></i></button>
+														<button id="rightBtn" class="btn btn-light"
+															onclick="format('justifyRight')"><i
+																class="fas fa-align-right"></i></button>
+														<button id="justifyBtn" class="btn btn-light"
+															onclick="format('justifyFull')"><i
+																class="fas fa-align-justify"></i></button>
+														<button id="linkBtn" class="btn btn-light"
+															onclick="format('createLink', prompt('Enter the URL:'))"><i
+																class="fas fa-link"></i></button>
+														<button id="imageBtn" class="btn btn-light"
+															onclick="format('insertImage', prompt('Enter the image URL:'))"><i
+																class="fas fa-image"></i></button>
+														<button id="tableBtn" class="btn btn-light"
+															onclick="insertTable()"><i
+																class="fas fa-table"></i></button>
+														<button id="codeBtn" class="btn btn-light"
+															onclick="format('insertHTML', '<code></code>')"><i
+																class="fas fa-code"></i></button>
+														<button id="quoteBtn" class="btn btn-light"
+															onclick="format('formatBlock', 'blockquote')"><i
+																class="fas fa-quote-right"></i></button>
+													</div>
+													<div class="editor-container">
+														<iframe id="editor" class="editor"
+															placeholder="Start Writting..."></iframe>
+													</div>
+
+
+
+
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Additional Payment Information</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Used Added Payment Information</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+
+												<label for="policy fs-bold">Payment Method Message</label>
+												<div class=" mt-3">
+													<div class="toolbar ">
+														<div class="dropdown">
+															<button class="btn btn-light dropdown-toggle" type="button"
+																id="formatBlockDropdown" data-toggle="dropdown"
+																aria-haspopup="true" aria-expanded="false">
+																Normal
+															</button>
+															<div class="dropdown-menu"
+																aria-labelledby="formatBlockDropdown">
+																<a class="dropdown-item" href="#"
+																	onclick="format('formatBlock', 'p')">Normal</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('formatBlock', 'h1')">Heading 1</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('formatBlock', 'h2')">Heading 2</a>
+															</div>
+														</div>
+														<div class="dropdown">
+															<button class="btn btn-light dropdown-toggle" type="button"
+																id="fontNameDropdown" data-toggle="dropdown"
+																aria-haspopup="true" aria-expanded="false">
+																Sailec Light
+															</button>
+															<div class="dropdown-menu"
+																aria-labelledby="fontNameDropdown">
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontName', 'Sailec Light')">Sailec
+																	Light</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontName', 'Arial')">Arial</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontName', 'Times New Roman')">Times
+																	New Roman</a>
+															</div>
+														</div>
+														<div class="dropdown">
+															<button class="btn btn-light dropdown-toggle" type="button"
+																id="fontSizeDropdown" data-toggle="dropdown"
+																aria-haspopup="true" aria-expanded="false">
+																Font Size
+															</button>
+															<div class="dropdown-menu"
+																aria-labelledby="fontSizeDropdown">
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '1')">1</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '2')">2</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '3')">3</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '4')">4</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '5')">5</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '6')">6</a>
+																<a class="dropdown-item" href="#"
+																	onclick="format('fontSize', '7')">7</a>
+															</div>
+														</div>
+														<button id="boldBtn" class="btn btn-light"
+															onclick="format('bold')"><b>B</b></button>
+														<button id="italicBtn" class="btn btn-light"
+															onclick="format('italic')"><i>I</i></button>
+														<button id="underlineBtn" class="btn btn-light"
+															onclick="format('underline')"><u>U</u></button>
+														<button id="leftBtn" class="btn btn-light"
+															onclick="format('justifyLeft')"><i
+																class="fas fa-align-left"></i></button>
+														<button id="centerBtn" class="btn btn-light"
+															onclick="format('justifyCenter')"><i
+																class="fas fa-align-center"></i></button>
+														<button id="rightBtn" class="btn btn-light"
+															onclick="format('justifyRight')"><i
+																class="fas fa-align-right"></i></button>
+														<button id="justifyBtn" class="btn btn-light"
+															onclick="format('justifyFull')"><i
+																class="fas fa-align-justify"></i></button>
+														<button id="linkBtn" class="btn btn-light"
+															onclick="format('createLink', prompt('Enter the URL:'))"><i
+																class="fas fa-link"></i></button>
+														<button id="imageBtn" class="btn btn-light"
+															onclick="format('insertImage', prompt('Enter the image URL:'))"><i
+																class="fas fa-image"></i></button>
+														<button id="tableBtn" class="btn btn-light"
+															onclick="insertTable()"><i
+																class="fas fa-table"></i></button>
+														<button id="codeBtn" class="btn btn-light"
+															onclick="format('insertHTML', '<code></code>')"><i
+																class="fas fa-code"></i></button>
+														<button id="quoteBtn" class="btn btn-light"
+															onclick="format('formatBlock', 'blockquote')"><i
+																class="fas fa-quote-right"></i></button>
+													</div>
+													<div class="editor-container">
+														<iframe id="editor" class="editor"
+															placeholder="Start Writting..."></iframe>
+													</div>
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<label> Access Token</label>
+												<div class="px-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Constant Contact</p>
+														<div class="d-flex  ">
+															<p class=" mt-3"><span
+																	class="badge text-danger border border-danger"> +
+																	Link</span></p>
+
+
+														</div>
+													</div>
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Mail Champ</p>
+														<div class="d-flex  ">
+															<p class=" mt-3"><span
+																	class="badge text-danger border border-danger">+
+																	Link</span></p>
+
+
+														</div>
+													</div>
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<label class="my-">Merchant Set Up</label>
+												<div class="row ">
+													<div class="">
+														<div class="card container p-4">
+															<div class="row">
+																<div class="col-6">Stripe</div>
+																<div class="col-6 d-flex">
+																	<div class="form-check form-switch ms-auto">
 																		<input class="form-check-input" type="checkbox"
 																			role="switch" id="flexSwitchCheckDefault">
-																			
 																	</div>
-                                
-                            </div>
-							</div>
-                               
-                            </div>
-                  
-                <div class=" mt-3">
-                    <div class="toolbar ">
-                        <div class="dropdown">
-                            <button class="btn btn-light dropdown-toggle" type="button" id="formatBlockDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Normal
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="formatBlockDropdown">
-                                <a class="dropdown-item" href="#" onclick="format('formatBlock', 'p')">Normal</a>
-                                <a class="dropdown-item" href="#" onclick="format('formatBlock', 'h1')">Heading 1</a>
-                                <a class="dropdown-item" href="#" onclick="format('formatBlock', 'h2')">Heading 2</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn btn-light dropdown-toggle" type="button" id="fontNameDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Sailec Light
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="fontNameDropdown">
-                                <a class="dropdown-item" href="#" onclick="format('fontName', 'Sailec Light')">Sailec Light</a>
-                                <a class="dropdown-item" href="#" onclick="format('fontName', 'Arial')">Arial</a>
-                                <a class="dropdown-item" href="#" onclick="format('fontName', 'Times New Roman')">Times New Roman</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn btn-light dropdown-toggle" type="button" id="fontSizeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Font Size
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="fontSizeDropdown">
-                                <a class="dropdown-item" href="#" onclick="format('fontSize', '1')">1</a>
-                                <a class="dropdown-item" href="#" onclick="format('fontSize', '2')">2</a>
-                                <a class="dropdown-item" href="#" onclick="format('fontSize', '3')">3</a>
-                                <a class="dropdown-item" href="#" onclick="format('fontSize', '4')">4</a>
-                                <a class="dropdown-item" href="#" onclick="format('fontSize', '5')">5</a>
-                                <a class="dropdown-item" href="#" onclick="format('fontSize', '6')">6</a>
-                                <a class="dropdown-item" href="#" onclick="format('fontSize', '7')">7</a>
-                            </div>
-                        </div>
-                        <button id="boldBtn" class="btn btn-light" onclick="format('bold')"><b>B</b></button>
-                        <button id="italicBtn" class="btn btn-light" onclick="format('italic')"><i>I</i></button>
-                        <button id="underlineBtn" class="btn btn-light" onclick="format('underline')"><u>U</u></button>
-                        <button id="leftBtn" class="btn btn-light" onclick="format('justifyLeft')"><i class="fas fa-align-left"></i></button>
-                        <button id="centerBtn" class="btn btn-light" onclick="format('justifyCenter')"><i class="fas fa-align-center"></i></button>
-                        <button id="rightBtn" class="btn btn-light" onclick="format('justifyRight')"><i class="fas fa-align-right"></i></button>
-                        <button id="justifyBtn" class="btn btn-light" onclick="format('justifyFull')"><i class="fas fa-align-justify"></i></button>
-                        <button id="linkBtn" class="btn btn-light" onclick="format('createLink', prompt('Enter the URL:'))"><i class="fas fa-link"></i></button>
-                        <button id="imageBtn" class="btn btn-light" onclick="format('insertImage', prompt('Enter the image URL:'))"><i class="fas fa-image"></i></button>
-                        <button id="tableBtn" class="btn btn-light" onclick="insertTable()"><i class="fas fa-table"></i></button>
-                        <button id="codeBtn" class="btn btn-light" onclick="format('insertHTML', '<code></code>')"><i class="fas fa-code"></i></button>
-                        <button id="quoteBtn" class="btn btn-light" onclick="format('formatBlock', 'blockquote')"><i class="fas fa-quote-right"></i></button>
-                    </div>
-                    <div class="editor-container">
-                        <iframe id="editor" class="editor" placeholder="Start Writting..."></iframe>
-                    </div>
+																</div>
+															</div>
+															<div class="mt-2 row">
+																<div class="col-6">
+																	<label for="stripeSecretKey">Stripe Secret
+																		Key</label>
+																	<input type="text" class="form-control"
+																		id="stripeSecretKey"
+																		placeholder="Enter Stripe Secret Key">
+																</div>
+																<div class="col-6">
+																	<label for="stripePublicKey">Stripe Public
+																		Key</label>
+																	<input type="text" class="form-control"
+																		id="stripePublicKey"
+																		placeholder="Enter Stripe Public Key">
+																</div>
+															</div>
+															<div class="mt-4 row">
+																<div class="col-6 text-start">
+																	<button type="button"
+																		class="btn  border border-danger text-danger">Test
+																		Credential</button>
+																</div>
+																<div class="col-6 text-end">
+																	<button type="button"
+																		class="btn   text-bg-danger ">save</button>
+																</div>
+															</div>
+
+														</div>
+														<div
+															class="py-4 px-4 mt-5 border border-black rounded  d-flex justify-content-between ">
+															<div class="text-start">Shopify</div>
+															<div class="form-check form-switch  ">
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+															</div>
+														</div>
+														<div
+															class="py-4 px-4 mt-5 border border-black rounded  d-flex justify-content-between ">
+															<div class="text-start">PayPal</div>
+															<div class="form-check form-switch  ">
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+															</div>
+
+														</div>
+														<div class="d-flex justify-content-end mt-4 gap-4">
+															<button
+																class=" btn  text-danger py-4 px-6 border border-danger  ">Cancle</button>
+															<button
+																class=" btn py-4 px-8 text-bg-danger border me-3 ">Save</button>
+														</div>
+													</div>
+												</div>
 
 
+											</div>
 
-
-                  
-                </div>
-				<hr class="my-3" style="border-top: 1px solid #777777;" />
-                <div class="my-5">
-                  <div class="d-flex justify-content-between">
-					<p class=" mt-3">Privacy Policy</p>
-					<div class="d-flex  ">
-					<p class=" mt-3">Create Franchise Privacy Policy</p>
-									<div class="form-check form-switch my-auto">
-																		
-																		<input class="form-check-input" type="checkbox"
-																			role="switch" id="flexSwitchCheckDefault">
-																			
-																	</div>
-                                
-					</div>
-				</div>
-
-                </div>
-				<hr class="my-3" style="border-top: 1px solid #777777;" />
-
-				<hr class="my-3" style="border-top: 1px solid #777777;" />
-                <div class="my-5">
-                  <div class="d-flex justify-content-between">
-					<p class=" mt-3">Privacy Policy</p>
-					<div class="d-flex  ">
-					<p class=" mt-3">Create Franchise Privacy Policy</p>
-									<div class="form-check form-switch my-auto">
-																		
-																		<input class="form-check-input" type="checkbox"
-																			role="switch" id="flexSwitchCheckDefault">
-																			
-																	</div>
-                                
-					</div>
-				</div>
-
-                </div>
-				<hr class="my-3" style="border-top: 1px solid #777777;" />
-                <div class="mb-3">
-                    <label for="additionalPaymentInformation" class="form-label">Additional Payment Information</label>
-                    <textarea class="form-control" id="additionalPaymentInformation" rows="3" placeholder="Enter additional payment information"></textarea>
-                </div>
-            </div>
-          
-        </div>
-	
-
-
-
-
+										</div>
 
 
 									</form>
@@ -5819,27 +6063,34 @@ License: For each use you must have a valid license purchased only from above li
 							<!-- Right Section  -->
 							<div class="col-xl-6 col-12 h-100 overflow-scroll hide-scrollbar">
 								<div class="card card-flush h-100 d-flex flex-column mb-3 position-relative mx-0">
-									<div class="py-2 px-2 fs-8 d-flex gap-2 justify-content-between setting-toggle-options">
-										<div class="px-3 py-3 bg-gray-200 rounded-2 setting-toggle-option active" onclick="optionToggle(event,0)">
+									<div
+										class="py-2 px-2 fs-8 d-flex gap-2 justify-content-between setting-toggle-options">
+										<div class="px-3 py-3 bg-gray-200 rounded-2 setting-toggle-option active"
+											onclick="optionToggle(event,0)">
 											Website Settings
 										</div>
-										<div class="px-3 py-3 bg-gray-300 rounded-2 setting-toggle-option" onclick="optionToggle(event,1)">
+										<div class="px-3 py-3 bg-gray-300 rounded-2 setting-toggle-option"
+											onclick="optionToggle(event,1)">
 											Website Program
 										</div>
-										<div class="px-3 py-3 bg-gray-300 rounded-2 setting-toggle-option" onclick="optionToggle(event,2)">
+										<div class="px-3 py-3 bg-gray-300 rounded-2 setting-toggle-option"
+											onclick="optionToggle(event,2)">
 											Web Party Invitations
 										</div>
-										<div class="px-3 py-3 bg-gray-300 rounded-2 setting-toggle-option" onclick="optionToggle(event,3)">
+										<div class="px-3 py-3 bg-gray-300 rounded-2 setting-toggle-option"
+											onclick="optionToggle(event,3)">
 											Website FAQs
 										</div>
-										<div class="px-3 py-3 bg-gray-300 rounded-2 setting-toggle-option" onclick="optionToggle(event,4)">
+										<div class="px-3 py-3 bg-gray-300 rounded-2 setting-toggle-option"
+											onclick="optionToggle(event,4)">
 											Website Blog
 										</div>
 									</div>
 
 									<!-- Rigth section Body  -->
 									<div class="py-4 fs-7 setting-right-block active">
-										<form id="settings-website-settings-form" class="website-setting-form" action="#">
+										<form id="settings-website-settings-form" class="website-setting-form"
+											action="#">
 											<!--begin::Input group-->
 											<div class="d-flex flex-column mb-8 fv-row px-5">
 												<!--begin::Label-->
@@ -5847,222 +6098,1010 @@ License: For each use you must have a valid license purchased only from above li
 													<span class="text-gray-500">Franchise Page Meta Description</span>
 												</label>
 												<!--end::Label-->
-												<input type="text" class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
-													placeholder="Franchise Page Meta Description" name="Franchise page meta description" />
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
 											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex justify-content-between align-items-center ">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is the
+														)</div>
+												</div>
+												<div><input class="form-check-input" type="checkbox" role="switch"
+														id="flexSwitchCheckDefault"></div>
+											</div>
+											<div class="d-flex justify-content-between align-items-center my-5">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is the
+														)</div>
+												</div>
+												<div><input class="form-check-input" type="checkbox" role="switch"
+														id="flexSwitchCheckDefault"></div>
+											</div>
+											<div class="d-flex justify-content-between align-items-center my-5">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is the
+														)</div>
+												</div>
+												<div><input class="form-check-input" type="checkbox" role="switch"
+														id="flexSwitchCheckDefault"></div>
+											</div>
+											<div class="d-flex justify-content-between align-items-center my-5">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is the
+														)</div>
+												</div>
+												<div><input class="form-check-input" type="checkbox" role="switch"
+														id="flexSwitchCheckDefault"></div>
+											</div>
+
+											<hr class="my-5" style="border-top: 3px solid #777777;" />
+											<div class="mx-5">
+												<div class="text-gray-800">Hide Birthday Parties</div>
+												<div class="text-gray-500">(Check box if you donot want to s is the )
+												</div>
+											</div>
+
+
+											<div class="d-flex flex-column mb-8 fv-row px-5 mt-8">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-500">Franchise Page Meta Description</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													placeholder="Franchise Page Meta Description"
+													name="Franchise page meta description" />
+											</div>
+											<div class="row">
+
+												<div class="col-6 d-flex flex-column mb-8 fv-row ps-7">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fw-medium mb-2">
+														<span class="text-gray-500">Franchise Page Meta
+															Description</span>
+													</label>
+													<!--end::Label-->
+													<input type="text"
+														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														placeholder="Franchise Page Meta Description"
+														name="Franchise page meta description" />
+												</div>
+												<div class="col-6 d-flex flex-column mb-8 fv-row px-5">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fw-medium mb-2">
+														<span class="text-gray-500">Franchise Page Meta
+															Description</span>
+													</label>
+													<!--end::Label-->
+													<input type="text"
+														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														placeholder="Franchise Page Meta Description"
+														name="Franchise page meta description" />
+												</div>
+
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<label class="my-2 text-gray-500 text-solid">Mailing List Subcription
+													Settings</label>
+
+												<div class="d-flex justify-content-between align-items-center my-5">
+													<div class="d-flex flex-column mx-5">
+														<div class="text-gray-800">Hide Birthday Parties</div>
+														<div class="text-gray-500">(Check box if you donot want to s is
+															the )</div>
+													</div>
+													<div>
+														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+															Content</button>
+														<button
+															class=" btn py-2 px-2 text-bg-warning border me-3 ">Reset</button>
+
+													</div>
+
+												</div>
+												<div class="d-flex justify-content-between align-items-center my-5">
+													<div class="d-flex flex-column mx-5">
+														<div class="text-gray-800">Hide Birthday Parties</div>
+														<div class="text-gray-500">(Check box if you donot want to s is
+															the )</div>
+													</div>
+													<div>
+														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+															Content</button>
+
+
+													</div>
+
+												</div>
+												<div class="d-flex justify-content-between align-items-center my-5">
+													<div class="d-flex flex-column mx-5">
+														<div class="text-gray-800">Hide Birthday Parties</div>
+														<div class="text-gray-500">(Check box if you donot want to s is
+															the )</div>
+													</div>
+													<div>
+														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+															Content</button>
+
+
+													</div>
+
+												</div>
+												<div class="d-flex justify-content-between align-items-center my-5">
+													<div class="d-flex flex-column mx-5">
+														<div class="text-gray-800">Hide Birthday Parties</div>
+														<div class="text-gray-500">(Check box if you donot want to s is
+															the )</div>
+													</div>
+													<div>
+														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+															Content</button>
+
+
+													</div>
+
+												</div>
+												<div class="d-flex justify-content-between align-items-center my-5">
+													<div class="d-flex flex-column mx-5">
+														<div class="text-gray-800">Hide Birthday Parties</div>
+														<div class="text-gray-500">(Check box if you donot want to s is
+															the )</div>
+													</div>
+													<div>
+														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+															Content</button>
+
+
+													</div>
+
+												</div>
+												<div class="d-flex justify-content-between align-items-center my-5">
+													<div class="d-flex flex-column mx-5">
+														<div class="text-gray-800">Hide Birthday Parties</div>
+														<div class="text-gray-500">(Check box if you donot want to s is
+															the )</div>
+													</div>
+													<div>
+														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+															Content</button>
+
+													</div>
+
+												</div>
+
+											</div>
+											<div class="d-flex justify-content-end mt-4 gap-4">
+												<button
+													class=" btn  text-danger py-4 px-6 border border-danger  ">Cancle</button>
+												<button class=" btn py-4 px-8 text-bg-danger border me-3 ">Save</button>
+											</div>
+
+
+
+
+
 										</form>
 									</div>
+
 									<div class="setting-right-block">
-										Part 2
-									</div>
-									<div class="py-4 setting-right-block">
-										<hr/>
-										<!--begin::Table-->
-										<div class="overflow-scroll">
-											<table class="table align-middle fs-7 table-row-dashed gy-3 mb-0 ">
-												<!--begin::Table head-->
-												<thead>
-													<!--begin::Table row-->
-													<tr class="text-start fw-bold Wtext-uppercase gs-0">
-														<th class="min-w-20px ps-3">Invitation ID</th>
-														<th class="min-w-20px">Invitation Name</th>
-														<th class="min-w-20px">Front</th>
-														<th class="min-w-20px">Back</th>
-														<th class="min-w-20px">Status</th>
-														<th class="pe-3">Actions</th>
-													</tr>
-													<!--end::Table row-->
-												</thead>
-												<!--end::Table head-->
-												<!--begin::Table body-->
-												<tbody class="text-gray-800 fw-semibold">
-													<tr>
-														<td>
-															<a href=""
-																class="text-gray-800 text-hover-primary ps-3">#254125544</a>
-														</td>
-														<td class="">Birthday Party</td>
-														<td class="">
-															<input class="front-form-check-input" type="checkbox" value="">
-														</td>
-														<td class="">
-															<input class="back-form-check-input" type="checkbox" value="">
-														</td>
-														<td class="">Franchise Owner</td>
-														<td >
-															<div class="d-flex gap-2">
-																<div class="text-success  "><i class="fa-solid fa-file"></i>
-																</div>
-																<div class="text-danger"><i class="fa-solid fa-eye"></i>
-																</div>
-																<div class="text-danger"><i class="fa-solid fa-xmark"></i>
-																</div>
-															</div>
-														</td>
-
-													</tr>
-													
-													
-
-
-												</tbody>
-												<!--end::Table body-->
-											</table>
+										<div class="d-flex flex-column mb-5 fv-row px-5 mt-8">
+											<!--begin::Label-->
+											<label class="d-flex align-items-center fw-medium mb-2">
+												<span class="text-gray-500">Franchise Page Meta Description</span>
+											</label>
+											<!--end::Label-->
+											<input type="text"
+												class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+												placeholder="Franchise Page Meta Description"
+												name="Franchise page meta description" />
 										</div>
-									</div>
-									<div class="py-4 setting-right-block">
-										<hr/>
-										<!--begin::Table-->
-										<div class="overflow-scroll">
-											<table class="table align-middle fs-7 table-row-dashed gy-3 mb-0 ">
-												<!--begin::Table head-->
-												<thead>
-													<!--begin::Table row-->
-													<tr class="text-start fw-bold Wtext-uppercase gs-0">
-														<th class="min-w-20px ps-3">FAQs ID</th>
-														<th class="min-w-100px">FAQs Name</th>
-														<th class="min-w-60px">Category</th>
-														<th class="min-w-150px">Question</th>
-														<th class="min-w-200px">Answer</th>
-														<th class="pe-3">Actions</th>
-													</tr>
-													<!--end::Table row-->
-												</thead>
-												<!--end::Table head-->
-												<!--begin::Table body-->
-												<tbody class="text-gray-800 fw-semibold">
-													<tr>
-														<td>
-															<a href=""
-																class="text-gray-800 text-hover-primary ps-3">#254125544</a>
-														</td>
-														<td class="">Lorem ipsum</td>
-														<td class="">School</td>
-														<td class="">What is lorem ipsum?</td>
-														<td class="">
-															lorem ipsum is simply dummy text of the prinitng and typesetting industry
-														</td>
-														<td >
-															<div class="d-flex gap-2">
-																<div class="text-danger"><i class="fa-solid fa-eye"></i>
-																</div>
+										<p class="text-danger ms-5 mt-3">After School Enrichment </p>
+										<hr class="my-3 mx-3" style="border-top: 3px solid #777777;" />
+										<div class="form-group">
+											<div class="d-flex justify-content-between mx-4">
+												<label for="policy">After School Enrichment</label>
+												<div class="d-flex">
+													<label class="form-check-label"
+														for="flexSwitchCheckDefault me-2"></label>
+													<div class="form-check form-switch my-auto">
+
+														<input class="form-check-input" type="checkbox" role="switch"
+															id="flexSwitchCheckDefault">
+
+													</div>
+
+												</div>
+											</div>
+											<div class="editor-container mx-4">
+												<iframe id="editor" class="editor"
+													placeholder="Start Writting..."></iframe>
+
+											</div>
+											<div class="d-flex justify-content-between align-items-center my-5">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is the
+														)</div>
+												</div>
+												<div>
+													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+														Content</button>
+													<button
+														class=" btn py-2 px-2 text-bg-warning border me-3 ">Reset</button>
+
+												</div>
+
+											</div>
+											<div class="row">
+
+												<div class="col-6 d-flex flex-column mb-8 fv-row ps-7">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fw-medium mb-2">
+														<span class="text-gray-500">Franchise Page Meta
+															Description</span>
+													</label>
+													<!--end::Label-->
+													<input type="text"
+														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														placeholder="Franchise Page Meta Description"
+														name="Franchise page meta description" />
+												</div>
+												<div class="col-6 d-flex flex-column mb-8 fv-row px-5">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fw-medium mb-2">
+														<span class="text-gray-500">Franchise Page Meta
+															Description</span>
+													</label>
+													<!--end::Label-->
+													<input type="text"
+														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														placeholder="Franchise Page Meta Description"
+														name="Franchise page meta description" />
+												</div>
+												<div class="d-flex flex-column mb-8 fv-row px-5">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fw-medium mb-2">
+														<span class="text-gray-500">Franchise Page Meta
+															Description</span>
+													</label>
+													<!--end::Label-->
+													<input type="text"
+														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														placeholder="Franchise Page Meta Description"
+														name="Franchise page meta description" />
+												</div>
+												<div class="d-flex flex-column mb-8 fv-row px-5">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fw-medium mb-2">
+														<span class="text-gray-500">Franchise Page Meta
+															Description</span>
+													</label>
+													<!--end::Label-->
+													<input type="text"
+														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														placeholder="Franchise Page Meta Description"
+														name="Franchise page meta description" />
+												</div>
+
+												<div class="d-flex justify-content-between align-items-center ">
+													<div class="d-flex flex-column mx-5">
+														<div class="text-gray-800">Hide Birthday Parties<input
+																class=" ms-2 form-check-input" type="checkbox"
+																role="switch" id="flexSwitchCheckDefault"></div>
+
+													</div>
+													<div class="d-flex flex-column mx-5">
+														<div class="text-gray-800">Excluded This Programme from my
+															franchaise<input class=" ms-2 form-check-input"
+																type="checkbox" role="switch"
+																id="flexSwitchCheckDefault"></div>
+
+													</div>
+												</div>
+												<div class="d-flex justify-content-between align-items-center mt-5">
+													<div class="d-flex flex-column mx-5">
+														<div class="text-gray-800">Hide Birthday Parties<input
+																class=" ms-2 form-check-input" type="checkbox"
+																role="switch" id="flexSwitchCheckDefault"></div>
+
+													</div>
+													<div class="d-flex gap-2 me-10">
+														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+															Content</button>
+														<button
+															class=" btn py-2 px-2 text-bg-warning border me-3 ">Reset</button>
+													</div>
+
+												</div>
+												<div class="d-flex justify-content-end mt-4 gap-7 me-5">
+													<button
+														class=" btn  text-danger py-4 px-10 border border-danger  ">Cancle</button>
+													<button
+														class=" btn py-4 px-10 text-bg-danger border me-3 ">Save</button>
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
 															</div>
-														</td>
 
-													</tr>
-													
-													
+														</div>
+													</div>
 
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
 
-												</tbody>
-												<!--end::Table body-->
-											</table>
-										</div>
-									</div>
-									<div class="setting-right-block">
-										<hr/>
-										<!--begin::Table-->
-										<div class="overflow-scroll">
-											<table class="table align-middle fs-7 table-row-dashed gy-3 mb-0 ">
-												<!--begin::Table head-->
-												<thead>
-													<!--begin::Table row-->
-													<tr class="text-start fw-bold Wtext-uppercase gs-0">
-														<th class="min-w-20px ps-3">Blog ID</th>
-														<th class="min-w-100px">Blog Name</th>
-														<th class="min-w-60px">Category</th>
-														<th class="min-w-150px">Created Date</th>
-														<th class="min-w-200px">Excerpt</th>
-														<th class="pe-3">Actions</th>
-													</tr>
-													<!--end::Table row-->
-												</thead>
-												<!--end::Table head-->
-												<!--begin::Table body-->
-												<tbody class="text-gray-800 fw-semibold">
-													<tr>
-														<td>
-															<a href=""
-																class="text-gray-800 text-hover-primary ps-3">#254125544</a>
-														</td>
-														<td class="">Lorem ipsum</td>
-														<td class="">School</td>
-														<td class="">What is lorem ipsum?</td>
-														<td class="">
-															lorem ipsum is simply dummy text of the prinitng and typesetting industry
-														</td>
-														<td >
-															<div class="d-flex gap-2">
-																<div class="text-danger"><i class="fa-solid fa-eye"></i>
-																</div>
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
 															</div>
-														</td>
 
-													</tr>
-													
-													
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<div class="my-5">
+													<div class="d-flex justify-content-between">
+														<p class=" mt-3">Privacy Policy</p>
+														<div class="d-flex  ">
+															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<div class="form-check form-switch my-auto">
+
+																<input class="form-check-input" type="checkbox"
+																	role="switch" id="flexSwitchCheckDefault">
+
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+											
+												</div>
 
 
-												</tbody>
-												<!--end::Table body-->
-											</table>
+
+
+												</div>
+
+											</div>
+											<div class="py-4 setting-right-block">
+												<hr />
+												<!--begin::Table-->
+												<div class="overflow-scroll">
+													<table class="table align-middle fs-7 table-row-dashed gy-3 mb-0 ">
+														<!--begin::Table head-->
+														<thead>
+															<!--begin::Table row-->
+															<tr class="text-start fw-bold Wtext-uppercase gs-0">
+																<th class="min-w-20px ps-3">Invitation ID</th>
+																<th class="min-w-20px">Invitation Name</th>
+																<th class="min-w-20px">Front</th>
+																<th class="min-w-20px">Back</th>
+																<th class="min-w-20px">Status</th>
+																<th class="pe-3">Actions</th>
+															</tr>
+															<!--end::Table row-->
+														</thead>
+														<!--end::Table head-->
+														<!--begin::Table body-->
+														<tbody class="text-gray-800 fw-semibold">
+															<tr>
+																<td>
+																	<a href=""
+																		class="text-gray-800 text-hover-primary ps-3">#254125544</a>
+																</td>
+																<td class="">Birthday Party</td>
+																<td class="">
+																	<input class="front-form-check-input"
+																		type="checkbox" value="">
+																</td>
+																<td class="">
+																	<input class="back-form-check-input" type="checkbox"
+																		value="">
+																</td>
+																<td class="">Franchise Owner</td>
+																<td>
+																	<div class="d-flex gap-2">
+																		<div class="text-success  "><i
+																				class="fa-solid fa-file"></i>
+																		</div>
+																		<div class="text-danger"><i
+																				class="fa-solid fa-eye"></i>
+																		</div>
+																		<div class="text-danger"><i
+																				class="fa-solid fa-xmark"></i>
+																		</div>
+																	</div>
+																</td>
+
+															</tr>
+
+
+
+
+														</tbody>
+														<!--end::Table body-->
+													</table>
+												</div>
+											</div>
+											<div class="py-4 setting-right-block">
+												<hr />
+												<!--begin::Table-->
+												<div class="overflow-scroll">
+													<table class="table align-middle fs-7 table-row-dashed gy-3 mb-0 ">
+														<!--begin::Table head-->
+														<thead>
+															<!--begin::Table row-->
+															<tr class="text-start fw-bold Wtext-uppercase gs-0">
+																<th class="min-w-20px ps-3">FAQs ID</th>
+																<th class="min-w-100px">FAQs Name</th>
+																<th class="min-w-60px">Category</th>
+																<th class="min-w-150px">Question</th>
+																<th class="min-w-200px">Answer</th>
+																<th class="pe-3">Actions</th>
+															</tr>
+															<!--end::Table row-->
+														</thead>
+														<!--end::Table head-->
+														<!--begin::Table body-->
+														<tbody class="text-gray-800 fw-semibold">
+															<tr>
+																<td>
+																	<a href=""
+																		class="text-gray-800 text-hover-primary ps-3">#254125544</a>
+																</td>
+																<td class="">Lorem ipsum</td>
+																<td class="">School</td>
+																<td class="">What is lorem ipsum?</td>
+																<td class="">
+																	lorem ipsum is simply dummy text of the prinitng and
+																	typesetting industry
+																</td>
+																<td>
+																	<div class="d-flex gap-2">
+																		<div class="text-danger"><i
+																				class="fa-solid fa-eye"></i>
+																		</div>
+																	</div>
+																</td>
+
+															</tr>
+
+
+
+
+														</tbody>
+														<!--end::Table body-->
+													</table>
+												</div>
+											</div>
+											<div class="setting-right-block">
+												<hr />
+												<!--begin::Table-->
+												<div class="overflow-scroll">
+													<table class="table align-middle fs-7 table-row-dashed gy-3 mb-0 ">
+														<!--begin::Table head-->
+														<thead>
+															<!--begin::Table row-->
+															<tr class="text-start fw-bold Wtext-uppercase gs-0">
+																<th class="min-w-20px ps-3">Blog ID</th>
+																<th class="min-w-100px">Blog Name</th>
+																<th class="min-w-60px">Category</th>
+																<th class="min-w-150px">Created Date</th>
+																<th class="min-w-200px">Excerpt</th>
+																<th class="pe-3">Actions</th>
+															</tr>
+															<!--end::Table row-->
+														</thead>
+														<!--end::Table head-->
+														<!--begin::Table body-->
+														<tbody class="text-gray-800 fw-semibold">
+															<tr>
+																<td>
+																	<a href=""
+																		class="text-gray-800 text-hover-primary ps-3">#254125544</a>
+																</td>
+																<td class="">Lorem ipsum</td>
+																<td class="">School</td>
+																<td class="">What is lorem ipsum?</td>
+																<td class="">
+																	lorem ipsum is simply dummy text of the prinitng and
+																	typesetting industry
+																</td>
+																<td>
+																	<div class="d-flex gap-2">
+																		<div class="text-danger"><i
+																				class="fa-solid fa-eye"></i>
+																		</div>
+																	</div>
+																</td>
+
+															</tr>
+
+
+
+
+														</tbody>
+														<!--end::Table body-->
+													</table>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>	
+							</div>
+							<!--end::Page-->
 						</div>
-					</div>
-					<!--end::Page-->
-				</div>
 
 
 
-				<!--end::Modal - Invite Friend-->
-				<!--end::Modals-->
-				<!--begin::Javascript-->
-				<script>
-					// jb toggle fuctionalities
-					function optionToggle(event, i){
-						const allOptions = document.querySelectorAll(".setting-toggle-option");
-						allOptions.forEach((ele,i)=>{ele.classList.remove('active');});
-						const allBlocks = document.querySelectorAll(".setting-right-block");
-						allBlocks.forEach((ele,i)=>ele.classList.remove('active'));
-						allOptions[i].classList.add('active');
-						allBlocks[i].classList.add('active');
+						<!--end::Modal - Invite Friend-->
+						<!--end::Modals-->
+						<!--begin::Javascript-->
+						<script>
+							// jb toggle fuctionalities
+							function optionToggle(event, i) {
+								const allOptions = document.querySelectorAll(".setting-toggle-option");
+								allOptions.forEach((ele, i) => { ele.classList.remove('active'); });
+								const allBlocks = document.querySelectorAll(".setting-right-block");
+								allBlocks.forEach((ele, i) => ele.classList.remove('active'));
+								allOptions[i].classList.add('active');
+								allBlocks[i].classList.add('active');
 
-					}
-				</script>
+							}
+						</script>
 
 
-				<script>var hostUrl = "assets/";</script>
-				<!--begin::Global Javascript Bundle(mandatory for all pages)-->
-				<script src="assets/plugins/global/plugins.bundle.js"></script>
-				<script src="assets/js/scripts.bundle.js"></script>
-				<!--end::Global Javascript Bundle-->
-				<!--begin::Vendors Javascript(used for this page only)-->
-				<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
-				<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
-				<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-				<!--end::Vendors Javascript-->
-				<!--begin::Custom Javascript(used for this page only)-->
-				<script src="assets/js/widgets.bundle.js"></script>
-				<script src="assets/js/custom/widgets.js"></script>
-				<script src="assets/js/custom/apps/chat/chat.js"></script>
-				<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
-				<script src="assets/js/custom/utilities/modals/create-app.js"></script>
-				<script src="assets/js/custom/utilities/modals/users-search.js"></script>
-				<!--end::Custom Javascript-->
-				<!--end::Javascript-->
+						<script>var hostUrl = "assets/";</script>
+						<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+						<script src="assets/plugins/global/plugins.bundle.js"></script>
+						<script src="assets/js/scripts.bundle.js"></script>
+						<!--end::Global Javascript Bundle-->
+						<!--begin::Vendors Javascript(used for this page only)-->
+						<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+						<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+						<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+						<!--end::Vendors Javascript-->
+						<!--begin::Custom Javascript(used for this page only)-->
+						<script src="assets/js/widgets.bundle.js"></script>
+						<script src="assets/js/custom/widgets.js"></script>
+						<script src="assets/js/custom/apps/chat/chat.js"></script>
+						<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+						<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+						<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+						<!--end::Custom Javascript-->
+						<!--end::Javascript-->
 </body>
 <!--end::Body-->
 
