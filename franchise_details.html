@@ -5640,11 +5640,29 @@ License: For each use you must have a valid license purchased only from above li
 											class="badge py-3 px-4 fs-5 badge-light-success">Franchise</span>
 									</p>
 									<div
-										class="position-absolute top-0 end-0 rounded-circle bg-white shadow h-30px w-30px d-flex justify-content-center align-items-center">
-										<img alt="svgImg"
-											src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNkYjJhNGUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoMTAuNjY2NjcsMTAuNjY2NjcpIj48cGF0aCBkPSJNMTgsMmwtMi40MTQwNiwyLjQxNDA2bDQsNGwyLjQxNDA2LC0yLjQxNDA2ek0xNC4wNzYxNyw1LjkyMzgzbC0xMS4wNzYxNywxMS4wNzYxN3Y0aDRsMTEuMDc2MTcsLTExLjA3NjE3eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==" />
+										class="position-absolute top-0 end-0  h-30px w-30px d-flex justify-content-center align-items-center">
+										<div id="saveParentInformation_div" hidden="hidden">
+													<a href="#" id="parent_information" onclick="dontSaveParentInformation()">
+													<i class="ki-duotone fs-1 ki-cross-circle text-danger pt-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														</i></a>
+												
+													<a href="#" id="parent_information" onclick="saveParentInformation()">
+													<i class="ki-duotone fs-1 ki-check-square pt-2 text-primary ms-6">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														</i></a>
+												</div>	
+												<div id="editParentInformation_div">
+													<a href="#" id="parent_information" onclick="editParentInformation()">
+													<i class="ki-duotone fs-1 ki-notepad-edit ">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														</i></a>
+													</div>
 									</div>
-
+                                     
 									<div class="symbol symbol-100px symbol-lg-160px mt-2 mb-4 mx-auto">
 										<img src="assets/media/avatars/300-10.jpg" alt="image" />
 									</div>
@@ -5941,10 +5959,15 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="card card-flush mb-3 position-relative">
 									<p class="text-start m-2  fw-bold  fs-8"> <span
 											class="badge py-3 px-4 fs-5 badge-light-success">Payment Method</span></p>
-									<div
-										class="position-absolute top-0 end-0 rounded-circle bg-white shadow h-30px w-30px d-flex justify-content-center align-items-center">
-										<img alt="svgImg"
-											src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNkYjJhNGUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoMTAuNjY2NjcsMTAuNjY2NjcpIj48cGF0aCBkPSJNMTgsMmwtMi40MTQwNiwyLjQxNDA2bDQsNGwyLjQxNDA2LC0yLjQxNDA2ek0xNC4wNzYxNyw1LjkyMzgzbC0xMS4wNzYxNywxMS4wNzYxN3Y0aDRsMTEuMDc2MTcsLTExLjA3NjE3eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==" />
+											<div
+										class="position-absolute top-0 end-0  h-30px w-30px d-flex justify-content-center align-items-center">
+										<div id="editParentInformation_div">
+													<a href="#" id="parent_information" onclick="editParentInformation()">
+													<i class="ki-duotone fs-1 ki-notepad-edit ">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														</i></a>
+													</div>
 									</div>
 									<!--begin::Header-->
 
@@ -5993,10 +6016,15 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="card card-flush mb-12 mt-2 position-relative">
 									<p class="text-start m-2  fw-bold  fs-8"> <span
 										class="badge py-3 px-4 fs-5 badge-light-success">Owner Info</span></p>
-									<div
-										class="position-absolute top-0 end-0 rounded-circle bg-white shadow h-30px w-30px d-flex justify-content-center align-items-center">
-										<img alt="svgImg"
-											src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNkYjJhNGUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoMTAuNjY2NjcsMTAuNjY2NjcpIj48cGF0aCBkPSJNMTgsMmwtMi40MTQwNiwyLjQxNDA2bDQsNGwyLjQxNDA2LC0yLjQxNDA2ek0xNC4wNzYxNyw1LjkyMzgzbC0xMS4wNzYxNywxMS4wNzYxN3Y0aDRsMTEuMDc2MTcsLTExLjA3NjE3eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==" />
+										<div
+										class="position-absolute top-0 end-0  h-30px w-30px d-flex justify-content-center align-items-center">
+										<div id="editParentInformation_div">
+													<a href="#" id="parent_information" onclick="editParentInformation()">
+													<i class="ki-duotone fs-1 ki-notepad-edit ">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														</i></a>
+													</div>
 									</div>
 									<!--begin::Header-->
 
@@ -6072,10 +6100,15 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="card card-flush mb-3  position-relative">
 									<p class="text-start m-2  fw-bold  fs-8"> <span
 										class="badge py-3 px-4 fs-5 badge-light-success">Primary Address</span></p>
-									<div
-										class="position-absolute top-0 end-0 rounded-circle bg-white shadow h-30px w-30px d-flex justify-content-center align-items-center">
-										<img alt="svgImg"
-											src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNkYjJhNGUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoMTAuNjY2NjcsMTAuNjY2NjcpIj48cGF0aCBkPSJNMTgsMmwtMi40MTQwNiwyLjQxNDA2bDQsNGwyLjQxNDA2LC0yLjQxNDA2ek0xNC4wNzYxNyw1LjkyMzgzbC0xMS4wNzYxNywxMS4wNzYxN3Y0aDRsMTEuMDc2MTcsLTExLjA3NjE3eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==" />
+										<div
+										class="position-absolute top-0 end-0  h-30px w-30px d-flex justify-content-center align-items-center">
+										<div id="editParentInformation_div">
+													<a href="#" id="parent_information" onclick="editParentInformation()">
+													<i class="ki-duotone fs-1 ki-notepad-edit ">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														</i></a>
+													</div>
 									</div>
 									<!--begin::Header-->
 
@@ -6143,10 +6176,15 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="card card-flush mb-3 position-relative">
 									<p class="text-start m-2  fw-bold  fs-8"> <span
 										class="badge py-3 px-4 fs-5 badge-light-success">Additional Address</span></p>
-									<div
-										class="position-absolute top-0 end-0 rounded-circle bg-white shadow h-30px w-30px d-flex justify-content-center align-items-center">
-										<img alt="svgImg"
-											src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNkYjJhNGUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoMTAuNjY2NjcsMTAuNjY2NjcpIj48cGF0aCBkPSJNMTgsMmwtMi40MTQwNiwyLjQxNDA2bDQsNGwyLjQxNDA2LC0yLjQxNDA2ek0xNC4wNzYxNyw1LjkyMzgzbC0xMS4wNzYxNywxMS4wNzYxN3Y0aDRsMTEuMDc2MTcsLTExLjA3NjE3eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==" />
+										<div
+										class="position-absolute top-0 end-0  h-30px w-30px d-flex justify-content-center align-items-center">
+										<div id="editParentInformation_div">
+													<a href="#" id="parent_information" onclick="editParentInformation()">
+													<i class="ki-duotone fs-1 ki-notepad-edit ">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														</i></a>
+													</div>
 									</div>
 									<!--begin::Header-->
 
@@ -6199,10 +6237,15 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="card card-flush mb-3 position-relative">
 									<p class="text-start m-2  fw-bold  fs-8"> <span
 										class="badge py-3 px-4 fs-5 badge-light-success">Attachment</span></p>
-									<div
-										class="position-absolute top-0 end-0 rounded-circle bg-white shadow h-30px w-30px d-flex justify-content-center align-items-center">
-										<img alt="svgImg"
-											src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNkYjJhNGUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoMTAuNjY2NjcsMTAuNjY2NjcpIj48cGF0aCBkPSJNMTgsMmwtMi40MTQwNiwyLjQxNDA2bDQsNGwyLjQxNDA2LC0yLjQxNDA2ek0xNC4wNzYxNyw1LjkyMzgzbC0xMS4wNzYxNywxMS4wNzYxN3Y0aDRsMTEuMDc2MTcsLTExLjA3NjE3eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==" />
+										<div
+										class="position-absolute top-0 end-0  h-30px w-30px d-flex justify-content-center align-items-center">
+										<div id="editParentInformation_div">
+													<a href="#" id="parent_information" onclick="editParentInformation()">
+													<i class="ki-duotone fs-1 ki-notepad-edit ">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														</i></a>
+													</div>
 									</div>
 
 									<div class="card-body card-body d-flex justify-content-between flex-column">
@@ -6325,10 +6368,15 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="card card-flush mb-3 position-relative">
 									<p class="text-start m-2  fw-bold  fs-8"> <span
 										class="badge py-3 px-4 fs-5 badge-light-success">More Info to display on public page </span></p>
-									<div
-										class="position-absolute top-0 end-0 rounded-circle bg-white shadow h-30px w-30px d-flex justify-content-center align-items-center">
-										<img alt="svgImg"
-											src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNkYjJhNGUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoMTAuNjY2NjcsMTAuNjY2NjcpIj48cGF0aCBkPSJNMTgsMmwtMi40MTQwNiwyLjQxNDA2bDQsNGwyLjQxNDA2LC0yLjQxNDA2ek0xNC4wNzYxNyw1LjkyMzgzbC0xMS4wNzYxNywxMS4wNzYxN3Y0aDRsMTEuMDc2MTcsLTExLjA3NjE3eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==" />
+										<div
+										class="position-absolute top-0 end-0  h-30px w-30px d-flex justify-content-center align-items-center">
+										<div id="editParentInformation_div">
+													<a href="#" id="parent_information" onclick="editParentInformation()">
+													<i class="ki-duotone fs-1 ki-notepad-edit ">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														</i></a>
+													</div>
 									</div>
 									<!--begin::Header-->
 
@@ -6484,10 +6532,15 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="card card-flush mb-3 position-relative">
 									<p class="text-start m-2  fw-bold  fs-6"> <span
 										class="badge py-3 px-4 fs-5 badge-light-success">Billing Address/Creative Center</span></p>
-									<div
-										class="position-absolute top-0 end-0 rounded-circle bg-white shadow h-30px w-30px d-flex justify-content-center align-items-center">
-										<img alt="svgImg"
-											src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNkYjJhNGUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoMTAuNjY2NjcsMTAuNjY2NjcpIj48cGF0aCBkPSJNMTgsMmwtMi40MTQwNiwyLjQxNDA2bDQsNGwyLjQxNDA2LC0yLjQxNDA2ek0xNC4wNzYxNyw1LjkyMzgzbC0xMS4wNzYxNywxMS4wNzYxN3Y0aDRsMTEuMDc2MTcsLTExLjA3NjE3eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==" />
+										<div
+										class="position-absolute top-0 end-0  h-30px w-30px d-flex justify-content-center align-items-center">
+										<div id="editParentInformation_div">
+													<a href="#" id="parent_information" onclick="editParentInformation()">
+													<i class="ki-duotone fs-1 ki-notepad-edit ">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														</i></a>
+													</div>
 									</div>
 									<!--begin::Header-->
 
@@ -8309,6 +8362,80 @@ License: For each use you must have a valid license purchased only from above li
 		<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
 		<script src="assets/js/custom/utilities/modals/create-app.js"></script>
 		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+		<script>
+			
+			
+			{
+			function editParentInformation(){
+				var name_span_value = document.getElementById("name_span").innerHTML;
+				var email_span_value = document.getElementById("email_span").innerHTML;
+				var contact_span_value = document.getElementById("contact_span").innerHTML;
+				var secondary_span_value = document.getElementById("secondary_span").innerHTML;
+			
+
+				document.getElementById("name_input").value = name_span_value;
+				document.getElementById("email_input").value = email_span_value;
+				document.getElementById("contact_input").value = contact_span_value;
+				document.getElementById("secondary_input").value = secondary_span_value;
+
+				document.getElementById("name_span").setAttribute("hidden",true);
+				document.getElementById("email_span").setAttribute("hidden",true);
+				document.getElementById("contact_span").setAttribute("hidden",true);
+				document.getElementById("secondary_span").setAttribute("hidden",true);
+
+				document.getElementById("name_input").removeAttribute("hidden")
+				document.getElementById("email_input").removeAttribute("hidden")
+				document.getElementById("contact_input").removeAttribute("hidden")
+				document.getElementById("secondary_input").removeAttribute("hidden")
+
+				document.getElementById("saveParentInformation_div").removeAttribute("hidden")
+				document.getElementById("editParentInformation_div").setAttribute("hidden",true);
+			}
+			function saveParentInformation(){
+				var name_input_value = document.getElementById("name_input").value;
+				var email_input_value = document.getElementById("email_input").value;
+				var contact_input_value = document.getElementById("contact_input").value;
+				var secondary_input_value = document.getElementById("secondary_input").value;
+			
+
+				document.getElementById("name_span").innerHTML = name_input_value;
+				document.getElementById("email_span").innerHTML = email_input_value;
+				document.getElementById("contact_span").innerHTML = contact_input_value;
+				document.getElementById("secondary_span").innerHTML = secondary_input_value;
+
+			    document.getElementById("name_span").removeAttribute("hidden")
+			    document.getElementById("email_span").removeAttribute("hidden")
+			    document.getElementById("contact_span").removeAttribute("hidden")
+			    document.getElementById("secondary_span").removeAttribute("hidden")
+
+				document.getElementById("name_input").setAttribute("hidden",true);
+				document.getElementById("email_input").setAttribute("hidden",true);
+				document.getElementById("contact_input").setAttribute("hidden",true);
+				document.getElementById("secondary_input").setAttribute("hidden",true);
+
+
+				document.getElementById("saveParentInformation_div").setAttribute("hidden",true);
+				document.getElementById("editParentInformation_div").removeAttribute("hidden")
+			
+			}
+			function dontSaveParentInformation(){
+				document.getElementById("name_span").removeAttribute("hidden")
+				document.getElementById("email_span").removeAttribute("hidden")
+				document.getElementById("contact_span").removeAttribute("hidden")
+				document.getElementById("secondary_span").removeAttribute("hidden")
+
+				document.getElementById("name_input").setAttribute("hidden",true);
+				document.getElementById("email_input").setAttribute("hidden",true);
+				document.getElementById("contact_input").setAttribute("hidden",true);
+				document.getElementById("secondary_input").setAttribute("hidden",true);
+
+				document.getElementById("saveParentInformation_div").setAttribute("hidden",true);
+				document.getElementById("editParentInformation_div").removeAttribute("hidden")
+
+			}
+		}
+        
+			</script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
 </body>

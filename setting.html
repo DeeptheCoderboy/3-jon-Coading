@@ -5710,7 +5710,8 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="row">
 											<div class="p-8">
 												<div class="mb-3">
-													<label for="additionalFeeLabel" class="form-label">Additional Fee
+													<label for="additionalFeeLabel"
+														class="form-label text-gray-800 fw-bold mx-2">Additional Fee
 														Label</label>
 													<input type="text" class="form-control" id="additionalFeeLabel"
 														placeholder=" Additional fee label">
@@ -5718,13 +5719,15 @@ License: For each use you must have a valid license purchased only from above li
 
 												<div class="form-group">
 													<div class="d-flex justify-content-between">
-														<label for="policy" class="fs-bold fs-7">Policy</label>
+														<label for="policy"
+															class="text-gray-800 fw-bold fs-6 mx-2">Policy</label>
 														<div class="d-flex">
-															<label class="form-check-label"
+															<label
+																class="form-check-label text-gray-800 fw-bold fs-6 mx-4"
 																for="flexSwitchCheckDefault me-2">Use B4K Policy</label>
-															<div class="form-check form-switch my-auto">
+															<div class="form-check form-switch ">
 
-																<input class="form-check-input " type="checkbox"
+																<input class="form-check-input  " type="checkbox"
 																	role="switch" id="flexSwitchCheckDefault">
 
 															</div>
@@ -5734,116 +5737,19 @@ License: For each use you must have a valid license purchased only from above li
 
 												</div>
 
-												<div class=" mt-3">
-													<div class="toolbar ">
-														<div class="dropdown">
-															<button class="btn btn-light dropdown-toggle" type="button"
-																id="formatBlockDropdown" data-toggle="dropdown"
-																aria-haspopup="true" aria-expanded="false">
-																Normal
-															</button>
-															<div class="dropdown-menu"
-																aria-labelledby="formatBlockDropdown">
-																<a class="dropdown-item" href="#"
-																	onclick="format('formatBlock', 'p')">Normal</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('formatBlock', 'h1')">Heading 1</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('formatBlock', 'h2')">Heading 2</a>
-															</div>
-														</div>
-														<div class="dropdown">
-															<button class="btn btn-light dropdown-toggle" type="button"
-																id="fontNameDropdown" data-toggle="dropdown"
-																aria-haspopup="true" aria-expanded="false">
-																Sailec Light
-															</button>
-															<div class="dropdown-menu"
-																aria-labelledby="fontNameDropdown">
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontName', 'Sailec Light')">Sailec
-																	Light</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontName', 'Arial')">Arial</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontName', 'Times New Roman')">Times
-																	New Roman</a>
-															</div>
-														</div>
-														<div class="dropdown">
-															<button class="btn btn-light dropdown-toggle" type="button"
-																id="fontSizeDropdown" data-toggle="dropdown"
-																aria-haspopup="true" aria-expanded="false">
-																Font Size
-															</button>
-															<div class="dropdown-menu"
-																aria-labelledby="fontSizeDropdown">
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '1')">1</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '2')">2</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '3')">3</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '4')">4</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '5')">5</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '6')">6</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '7')">7</a>
-															</div>
-														</div>
-														<button id="boldBtn" class="btn btn-light"
-															onclick="format('bold')"><b>B</b></button>
-														<button id="italicBtn" class="btn btn-light"
-															onclick="format('italic')"><i>I</i></button>
-														<button id="underlineBtn" class="btn btn-light"
-															onclick="format('underline')"><u>U</u></button>
-														<button id="leftBtn" class="btn btn-light"
-															onclick="format('justifyLeft')"><i
-																class="fas fa-align-left"></i></button>
-														<button id="centerBtn" class="btn btn-light"
-															onclick="format('justifyCenter')"><i
-																class="fas fa-align-center"></i></button>
-														<button id="rightBtn" class="btn btn-light"
-															onclick="format('justifyRight')"><i
-																class="fas fa-align-right"></i></button>
-														<button id="justifyBtn" class="btn btn-light"
-															onclick="format('justifyFull')"><i
-																class="fas fa-align-justify"></i></button>
-														<button id="linkBtn" class="btn btn-light"
-															onclick="format('createLink', prompt('Enter the URL:'))"><i
-																class="fas fa-link"></i></button>
-														<button id="imageBtn" class="btn btn-light"
-															onclick="format('insertImage', prompt('Enter the image URL:'))"><i
-																class="fas fa-image"></i></button>
-														<button id="tableBtn" class="btn btn-light"
-															onclick="insertTable()"><i
-																class="fas fa-table"></i></button>
-														<button id="codeBtn" class="btn btn-light"
-															onclick="format('insertHTML', '<code></code>')"><i
-																class="fas fa-code"></i></button>
-														<button id="quoteBtn" class="btn btn-light"
-															onclick="format('formatBlock', 'blockquote')"><i
-																class="fas fa-quote-right"></i></button>
-													</div>
-													<div class="editor-container">
-														<iframe id="editor" class="editor"
-															placeholder="Start Writting..."></iframe>
-													</div>
-
-
-
-
-
+												<div class="editor-container">
+													<textarea id="editor" class="editor"
+														placeholder="Start Writting...">
+													</textarea>
 												</div>
-												<hr class="my-5" style="border-top: 3px solid #777777;" />
+
+												<hr class="my-5" style="border-top: 3px dashed #777777;" />
 												<div class="my-5">
 													<div class="d-flex justify-content-between">
-														<p class=" mt-3">Privacy Policy</p>
+														<p class=" mt-3 text-gray-800 fw-bold mx-2">Privacy Policy</p>
 														<div class="d-flex  ">
-															<p class=" mt-3">Create Franchise Privacy Policy</p>
+															<p class=" mt-3 text-gray-800 fw-bold fs-6 mx-4">Create
+																Franchise Privacy Policy</p>
 															<div class="form-check form-switch my-auto">
 
 																<input class="form-check-input" type="checkbox"
@@ -5855,19 +5761,18 @@ License: For each use you must have a valid license purchased only from above li
 													</div>
 
 												</div>
-												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<hr class="my-5" style="border-top: 3px dashed #777777;" />
 
 												<div class="my-5">
 													<div class="d-flex justify-content-between">
-														<p class=" mt-3">Additional Payment Information</p>
+														<p class=" mt-3 text-gray-800 fw-bold fs-6 mx-2">Additional
+															Payment Information</p>
 														<div class="d-flex  ">
-															<p class=" mt-3">Used Added Payment Information</p>
-															<div class="form-check form-switch my-auto"
-																style="color: (220, 42, 78)">
-
+															<p class=" mt-3 text-gray-800 fw-bold fs-6 mx-4">Used Added
+																Payment Information</p>
+															<div class="form-check form-switch my-auto">
 																<input class="form-check-input" type="checkbox"
 																	role="switch" id="flexSwitchCheckDefault">
-
 															</div>
 
 														</div>
@@ -5875,139 +5780,46 @@ License: For each use you must have a valid license purchased only from above li
 
 												</div>
 
-												<hr class="my-5" style="border-top: 3px solid #777777;" />
+												<hr class="my-5" style="border-top: 3px dashed #777777;" />
 
-												<label for="policy fs-bold">Payment Method Message</label>
+												<label for="policy fs-bold"class=" fw-bold fs-6 mx-2 badge badge-light-success py-4 " >Payment Method Message</label>
 												<div class=" mt-3">
-													<div class="toolbar ">
-														<div class="dropdown">
-															<button class="btn btn-light dropdown-toggle" type="button"
-																id="formatBlockDropdown" data-toggle="dropdown"
-																aria-haspopup="true" aria-expanded="false">
-																Normal
-															</button>
-															<div class="dropdown-menu"
-																aria-labelledby="formatBlockDropdown">
-																<a class="dropdown-item" href="#"
-																	onclick="format('formatBlock', 'p')">Normal</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('formatBlock', 'h1')">Heading 1</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('formatBlock', 'h2')">Heading 2</a>
-															</div>
-														</div>
-														<div class="dropdown">
-															<button class="btn btn-light dropdown-toggle" type="button"
-																id="fontNameDropdown" data-toggle="dropdown"
-																aria-haspopup="true" aria-expanded="false">
-																Sailec Light
-															</button>
-															<div class="dropdown-menu"
-																aria-labelledby="fontNameDropdown">
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontName', 'Sailec Light')">Sailec
-																	Light</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontName', 'Arial')">Arial</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontName', 'Times New Roman')">Times
-																	New Roman</a>
-															</div>
-														</div>
-														<div class="dropdown">
-															<button class="btn btn-light dropdown-toggle" type="button"
-																id="fontSizeDropdown" data-toggle="dropdown"
-																aria-haspopup="true" aria-expanded="false">
-																Font Size
-															</button>
-															<div class="dropdown-menu"
-																aria-labelledby="fontSizeDropdown">
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '1')">1</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '2')">2</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '3')">3</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '4')">4</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '5')">5</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '6')">6</a>
-																<a class="dropdown-item" href="#"
-																	onclick="format('fontSize', '7')">7</a>
-															</div>
-														</div>
-														<button id="boldBtn" class="btn btn-light"
-															onclick="format('bold')"><b>B</b></button>
-														<button id="italicBtn" class="btn btn-light"
-															onclick="format('italic')"><i>I</i></button>
-														<button id="underlineBtn" class="btn btn-light"
-															onclick="format('underline')"><u>U</u></button>
-														<button id="leftBtn" class="btn btn-light"
-															onclick="format('justifyLeft')"><i
-																class="fas fa-align-left"></i></button>
-														<button id="centerBtn" class="btn btn-light"
-															onclick="format('justifyCenter')"><i
-																class="fas fa-align-center"></i></button>
-														<button id="rightBtn" class="btn btn-light"
-															onclick="format('justifyRight')"><i
-																class="fas fa-align-right"></i></button>
-														<button id="justifyBtn" class="btn btn-light"
-															onclick="format('justifyFull')"><i
-																class="fas fa-align-justify"></i></button>
-														<button id="linkBtn" class="btn btn-light"
-															onclick="format('createLink', prompt('Enter the URL:'))"><i
-																class="fas fa-link"></i></button>
-														<button id="imageBtn" class="btn btn-light"
-															onclick="format('insertImage', prompt('Enter the image URL:'))"><i
-																class="fas fa-image"></i></button>
-														<button id="tableBtn" class="btn btn-light"
-															onclick="insertTable()"><i
-																class="fas fa-table"></i></button>
-														<button id="codeBtn" class="btn btn-light"
-															onclick="format('insertHTML', '<code></code>')"><i
-																class="fas fa-code"></i></button>
-														<button id="quoteBtn" class="btn btn-light"
-															onclick="format('formatBlock', 'blockquote')"><i
-																class="fas fa-quote-right"></i></button>
-													</div>
 													<div class="editor-container">
-														<iframe id="editor" class="editor"
-															placeholder="Start Writting..."></iframe>
+														<textarea id="editor" class="editor"
+															placeholder="Start Writting..."></textarea>
 													</div>
 												</div>
-												<hr class="my-5" style="border-top: 3px solid #777777;" />
-												<label> Access Token</label>
+												<hr class="my-5" style="border-top: 3px dashed #777777;" />
+												<label class=" badge badge-light-success fw-bold fs-6 mx-2 py-2"> Access Token</label>
 												<div class="px-5">
 													<div class="d-flex justify-content-between">
-														<p class=" mt-3">Constant Contact</p>
+														<p class=" mt-3 text-gray-800 fw-bold fs-6 mx-2">Constant Contact</p>
 														<div class="d-flex  ">
-															<p class=" mt-3"><span
-																	class="badge text-danger border border-danger"> +
+															<p class=" mt-3 "><span
+																	class="badge text-danger border border-danger px-6 py-2"> +
 																	Link</span></p>
 
 
 														</div>
 													</div>
 													<div class="d-flex justify-content-between">
-														<p class=" mt-3">Mail Champ</p>
+														<p class=" mt-3 text-gray-800 fw-bold fs-6 mx-2">Mail Chimp</p>
 														<div class="d-flex  ">
 															<p class=" mt-3"><span
-																	class="badge text-danger border border-danger">+
+																	class="badge text-danger border border-danger px-6 py-2">+
 																	Link</span></p>
 
 
 														</div>
 													</div>
 												</div>
-												<hr class="my-5" style="border-top: 3px solid #777777;" />
-												<label class="my-">Merchant Set Up</label>
+												<hr class="my-5" style="border-top: 3px dashed #777777;" />
+												<label class="badge badge-light-success fw-bold fs-6 mx-2 py-2 mb-3">Merchant Set Up</label>
 												<div class="row ">
 													<div class="">
 														<div class="card container p-4">
 															<div class="row">
-																<div class="col-6">Stripe</div>
+																<div class="col-6 text-gray-800 fw-bold fs-6">Stripe</div>
 																<div class="col-6 d-flex">
 																	<div class="form-check form-switch ms-auto">
 																		<input class="form-check-input" type="checkbox"
@@ -6017,14 +5829,14 @@ License: For each use you must have a valid license purchased only from above li
 															</div>
 															<div class="mt-2 row">
 																<div class="col-6">
-																	<label for="stripeSecretKey">Stripe Secret
+																	<label for="stripeSecretKey" class="text-gray-800 fw-bold fs-6 ">Stripe Secret
 																		Key</label>
 																	<input type="text" class="form-control"
 																		id="stripeSecretKey"
 																		placeholder="Enter Stripe Secret Key">
 																</div>
 																<div class="col-6">
-																	<label for="stripePublicKey">Stripe Public
+																	<label for="stripePublicKey" class="text-gray-800 fw-bold fs-6 ">Stripe Public
 																		Key</label>
 																	<input type="text" class="form-control"
 																		id="stripePublicKey"
@@ -6038,23 +5850,22 @@ License: For each use you must have a valid license purchased only from above li
 																		Credential</button>
 																</div>
 																<div class="col-6 text-end">
-																	<button type="button" class="btn  text-light  px-15"
-																		style="background-color:rgb(220, 42, 78)">Save</button>
+																	<button type="button" class="btn  text-light  px-15 bg-primary fs-semibold fs-6">Save</button>
 																</div>
 															</div>
 
 														</div>
 														<div
-															class="py-4 px-4 mt-5 border border-black rounded  d-flex justify-content-between ">
-															<div class="text-start">Shopify</div>
+															class="py-4 px-4 mt-5 border border-secondary-emphasis rounded  d-flex justify-content-between ">
+															<div class="text-start text-gray-800 fw-bold fs-5 mx-2">Shopify</div>
 															<div class="form-check form-switch  ">
 																<input class="form-check-input" type="checkbox"
 																	role="switch" id="flexSwitchCheckDefault">
 															</div>
 														</div>
 														<div
-															class="py-4 px-4 mt-5 border border-black rounded  d-flex justify-content-between ">
-															<div class="text-start">PayPal</div>
+															class="py-4 px-4 mt-5 border border-secondary-emphasis rounded  d-flex justify-content-between ">
+															<div class="text-start text-gray-800 fw-bold fs-5 mx-2">PayPal</div>
 															<div class="form-check form-switch  ">
 																<input class="form-check-input" type="checkbox"
 																	role="switch" id="flexSwitchCheckDefault">
@@ -6064,8 +5875,7 @@ License: For each use you must have a valid license purchased only from above li
 														<div class="d-flex justify-content-end mt-4 gap-4">
 															<button
 																class=" btn  text-danger  px-15 border border-danger  ">Cancle</button>
-															<button class=" btn  px-15 text-white border me-3 "
-																style="background-color: rgb(220, 42, 78)">Save</button>
+															<button class=" btn  px-15 text-light border me-3 bg-primary ">Save</button>
 														</div>
 													</div>
 												</div>
@@ -6117,99 +5927,100 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="d-flex flex-column mb-8 fv-row px-5">
 												<!--begin::Label-->
 												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
+													<span class="text-gray-700 fw-bold fs-6">Franchise Page Meta Description</span>
 												</label>
 												<!--end::Label-->
 												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 													placeholder="Franchise Page Meta Description"
 													name="Franchise page meta description" />
 											</div>
 											<div class="d-flex flex-column mb-8 fv-row px-5">
 												<!--begin::Label-->
 												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
+													<span class="text-gray-700 fw-bold fs-6">Google Analytics Code (example: UA-12458791)</span>
 												</label>
 												<!--end::Label-->
 												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
+													placeholder="Google Analytics Code (example: UA-12458791)...."
+													name="Franchise page meta description" />
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-700 fw-bold fs-6">Facebook Pixel Code (exmaple: 45789621356)</span>
+												</label>
+												<!--end::Label-->
+												<input type="text"
+													class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 													placeholder="Franchise Page Meta Description"
 													name="Franchise page meta description" />
 											</div>
 											<div class="d-flex flex-column mb-8 fv-row px-5">
 												<!--begin::Label-->
 												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
+													<span class="text-gray-700 fw-bold fs-6">Franchise Site Body</span>
 												</label>
 												<!--end::Label-->
 												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 													placeholder="Franchise Page Meta Description"
 													name="Franchise page meta description" />
 											</div>
 											<div class="d-flex flex-column mb-8 fv-row px-5">
 												<!--begin::Label-->
 												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
+													<span class="text-gray-700 fw-bold fs-6">Franchise Site Body </span>
 												</label>
 												<!--end::Label-->
 												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 													placeholder="Franchise Page Meta Description"
 													name="Franchise page meta description" />
 											</div>
 											<div class="d-flex flex-column mb-8 fv-row px-5">
 												<!--begin::Label-->
 												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
+													<span class="text-gray-700 fw-bold fs-6">Franchise Page Top Image</span>
+												</label>
+												<div class="rounded-2 p-3 bg-white border border-gray-600">
+													<label class="file-upload-label d-block  text-secondary-emphasis text-danger bg-white fs-6 fw-semibold" for="file-upload">
+														Choose File
+													</label>
+													<input type="file" id="file-upload" class="file-upload-input d-none">
+												</div>
+											</div>
+											<div class="d-flex flex-column mb-8 fv-row px-5">
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fw-medium mb-2">
+													<span class="text-gray-700 fw-bold fs-6">Franchise Page Meta Description</span>
 												</label>
 												<!--end::Label-->
 												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 													placeholder="Franchise Page Meta Description"
 													name="Franchise page meta description" />
 											</div>
 											<div class="d-flex flex-column mb-8 fv-row px-5">
 												<!--begin::Label-->
 												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
+													<span class="text-gray-700 fw-bold fs-6">Franchise Page Meta Description</span>
 												</label>
 												<!--end::Label-->
 												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													class="form-control form-control-solid text-secondary-emhphasis bg-white border-1 border-gray-600 check"
 													placeholder="Franchise Page Meta Description"
 													name="Franchise page meta description" />
 											</div>
 											<div class="d-flex flex-column mb-8 fv-row px-5">
 												<!--begin::Label-->
 												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
+													<span class="ttext-gray-800 fw-bold fs-6">Franchise Page Meta Description</span>
 												</label>
 												<!--end::Label-->
 												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
-													placeholder="Franchise Page Meta Description"
-													name="Franchise page meta description" />
-											</div>
-											<div class="d-flex flex-column mb-8 fv-row px-5">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
-												</label>
-												<!--end::Label-->
-												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
-													placeholder="Franchise Page Meta Description"
-													name="Franchise page meta description" />
-											</div>
-											<div class="d-flex flex-column mb-8 fv-row px-5">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
-												</label>
-												<!--end::Label-->
-												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 													placeholder="Franchise Page Meta Description"
 													name="Franchise page meta description" />
 											</div>
@@ -6219,7 +6030,7 @@ License: For each use you must have a valid license purchased only from above li
 													<div class="text-gray-500">(Check box if you donot want to s is the
 														)</div>
 												</div>
-												<div><input class="form-check-input" type="checkbox" role="switch"
+												<div class="mx-5"><input class="form-check-input" type="checkbox" role="switch"
 														id="flexSwitchCheckDefault"></div>
 											</div>
 											<div class="d-flex justify-content-between align-items-center my-5">
@@ -6228,7 +6039,7 @@ License: For each use you must have a valid license purchased only from above li
 													<div class="text-gray-500">(Check box if you donot want to s is the
 														)</div>
 												</div>
-												<div><input class="form-check-input" type="checkbox" role="switch"
+												<div class="mx-5"><input class="form-check-input" type="checkbox" role="switch"
 														id="flexSwitchCheckDefault"></div>
 											</div>
 											<div class="d-flex justify-content-between align-items-center my-5">
@@ -6237,7 +6048,7 @@ License: For each use you must have a valid license purchased only from above li
 													<div class="text-gray-500">(Check box if you donot want to s is the
 														)</div>
 												</div>
-												<div><input class="form-check-input" type="checkbox" role="switch"
+												<div class="mx-5"><input class="form-check-input" type="checkbox" role="switch"
 														id="flexSwitchCheckDefault"></div>
 											</div>
 											<div class="d-flex justify-content-between align-items-center my-5">
@@ -6246,48 +6057,49 @@ License: For each use you must have a valid license purchased only from above li
 													<div class="text-gray-500">(Check box if you donot want to s is the
 														)</div>
 												</div>
-												<div><input class="form-check-input" type="checkbox" role="switch"
+												<div class="mx-5"><input class="form-check-input" type="checkbox" role="switch"
 														id="flexSwitchCheckDefault"></div>
 											</div>
 
 											<hr class="my-5" style="border-top: 3px solid #777777;" />
 											<div class="mx-5">
-												<div class="text-gray-800">Hide Birthday Parties</div>
-												<div class="text-gray-500">(Check box if you donot want to s is the )
+												<div class="text-gray-800 fw-bold fs-6 mb-2">Mailing List Subscription Settings</div>
+												<div class="text-gray-500">
+													hi,fjwfkjwjhfsfhwgfiuwgfhvfkjfhfkfjkgkfhfadcahgdfahahgduydgadakdhqidgdahdvakjhgqiudgacakdhid
 												</div>
 											</div>
 
 
-											<div class="d-flex flex-column mb-8 fv-row px-5 mt-8">
+											<div class="d-flex flex-column mb-6 fv-row px-5 mt-8">
 												<!--begin::Label-->
 												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
+													<span class="text-gray-800 fw-bold fs-6">Franchise Page Meta Description</span>
 												</label>
 												<!--end::Label-->
 												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 													placeholder="Franchise Page Meta Description"
 													name="Franchise page meta description" />
 											</div>
 											<div class="d-flex flex-column mb-8 fv-row px-5">
 												<!--begin::Label-->
 												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
+													<span class="text-gray-800 fw-bold fs-6">Franchise Page Meta Description</span>
 												</label>
 												<!--end::Label-->
 												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 													placeholder="Franchise Page Meta Description"
 													name="Franchise page meta description" />
 											</div>
 											<div class="d-flex flex-column mb-8 fv-row px-5">
 												<!--begin::Label-->
 												<label class="d-flex align-items-center fw-medium mb-2">
-													<span class="text-gray-500">Franchise Page Meta Description</span>
+													<span class="text-gray-800 fw-bold fs-6">Franchise Page Meta Description</span>
 												</label>
 												<!--end::Label-->
 												<input type="text"
-													class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+													class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 													placeholder="Franchise Page Meta Description"
 													name="Franchise page meta description" />
 											</div>
@@ -6296,31 +6108,31 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="col-6 d-flex flex-column mb-8 fv-row ps-7">
 													<!--begin::Label-->
 													<label class="d-flex align-items-center fw-medium mb-2">
-														<span class="text-gray-500">Franchise Page Meta
+														<span class="text-gray-800 fw-bold fs-6">Franchise Page Meta
 															Description</span>
 													</label>
 													<!--end::Label-->
 													<input type="text"
-														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 														placeholder="Franchise Page Meta Description"
 														name="Franchise page meta description" />
 												</div>
 												<div class="col-6 d-flex flex-column mb-8 fv-row px-5">
 													<!--begin::Label-->
 													<label class="d-flex align-items-center fw-medium mb-2">
-														<span class="text-gray-500">Franchise Page Meta
+														<span class="text-gray-800 fw-bold fs-6">Franchise Page Meta
 															Description</span>
 													</label>
 													<!--end::Label-->
 													<input type="text"
-														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 														placeholder="Franchise Page Meta Description"
 														name="Franchise page meta description" />
 												</div>
 											</div>
 
 											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<label class="my-2 text-gray-500 text-solid">Mailing List Subcription
+											<label class="my-2 mx-2 text-gray-800 fw-bold fs-6">Mailing List Subcription
 												Settings</label>
 
 											<div class="d-flex justify-content-between align-items-center my-5">
@@ -6330,10 +6142,10 @@ License: For each use you must have a valid license purchased only from above li
 														the )</div>
 												</div>
 												<div>
-													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+													<button class=" btn text-light text-bg-primary py-2 px-6 border gap-2">Edit
 														Content</button>
 													<button
-														class=" btn py-2 px-2 text-bg-warning border me-3 ">Reset</button>
+														class=" btn text-light py-2 px-6 text-bg-danger border me-3 ">Reset</button>
 
 												</div>
 
@@ -6345,7 +6157,7 @@ License: For each use you must have a valid license purchased only from above li
 														the )</div>
 												</div>
 												<div>
-													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+													<button class=" btn  text-bg-success py-2 px-4 border me-3 text-light"><i class="fa-regular text-light fa-pen-to-square"></i>Edit
 														Content</button>
 
 
@@ -6359,7 +6171,7 @@ License: For each use you must have a valid license purchased only from above li
 														the )</div>
 												</div>
 												<div>
-													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+													<button class=" btn  text-bg-success py-2 px-4 border me-3 text-light"><i class="fa-regular text-light fa-pen-to-square"></i>Edit
 														Content</button>
 
 
@@ -6373,7 +6185,7 @@ License: For each use you must have a valid license purchased only from above li
 														the )</div>
 												</div>
 												<div>
-													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+													<button class=" btn  text-bg-success py-2 px-4 border me-3 text-light"><i class="fa-regular text-light fa-pen-to-square"></i>Edit
 														Content</button>
 												</div>
 											</div>
@@ -6384,7 +6196,7 @@ License: For each use you must have a valid license purchased only from above li
 														the )</div>
 												</div>
 												<div>
-													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+													<button class=" btn  text-bg-success py-2 px-4 border me-3 text-light"><i class="fa-regular text-light fa-pen-to-square"></i>Edit
 														Content</button>
 
 
@@ -6398,7 +6210,7 @@ License: For each use you must have a valid license purchased only from above li
 														the )</div>
 												</div>
 												<div>
-													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+													<button class=" btn  text-bg-success py-2 px-4 border me-3 text-light"><i class="fa-regular text-light fa-pen-to-square"></i>Edit
 														Content</button>
 
 												</div>
@@ -6407,9 +6219,10 @@ License: For each use you must have a valid license purchased only from above li
 
 											<div class="d-flex justify-content-end mt-4 gap-4">
 												<button
-													class=" btn  text-danger py-4 px-6 border border-danger  ">Cancle</button>
-												<button class=" btn py-4 px-8 text-bg-danger border me-3 ">Save</button>
+													class=" btn  text-danger py-2 px-8 border border-danger  ">Cancle</button>
+												<button class=" btn py-2 px-8 text-light bg-primary me-3 ">Save</button>
 											</div>
+
 										</form>
 									</div>
 
@@ -6418,19 +6231,19 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="d-flex flex-column mb-5 fv-row px-5 mt-8">
 											<!--begin::Label-->
 											<label class="d-flex align-items-center fw-medium mb-2">
-												<span class="text-gray-500">Franchise Page Meta Description</span>
+												<span class="text-gray-800 fw-bold fs-6">Franchise Page Meta Description</span>
 											</label>
 											<!--end::Label-->
 											<input type="text"
-												class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+												class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 												placeholder="Franchise Page Meta Description"
 												name="Franchise page meta description" />
 										</div>
-										<p class="text-danger ms-5 mt-3">After School Enrichment </p>
+										<p class="text-danger ms-5 mt-3 gap-2">After School Enrichment <i class="fa-regular text-danger fa-circle-xmark"></i></p>
 										<hr class="my-3 mx-3" style="border-top: 3px solid #777777;" />
 										<div class="form-group">
-											<div class="d-flex justify-content-between mx-4">
-												<label for="policy">After School Enrichment</label>
+											<div class="d-flex justify-content-between mx-4 mt-5">
+												<label for="policy" class="text-gray-800 fw-bold fs-5 mx-2">After School Enrichment</label>
 												<div class="d-flex">
 													<div class="form-check form-switch my-auto">
 														<input class="form-check-input" type="checkbox" role="switch"
@@ -6447,16 +6260,16 @@ License: For each use you must have a valid license purchased only from above li
 											</div>
 											<div class="d-flex justify-content-between align-items-center my-5">
 												<div class="d-flex flex-column mx-5">
-													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-800 fw-bold fs-5 mx-2">Hide Birthday Parties</div>
 													<div class="text-gray-500">(Check box if you donot want to s is the
 														)
 													</div>
 												</div>
 												<div>
-													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+													<button class=" btn  text-light bg-primary py-2 px-6 border gap-2"><i class="fa-regular text-light fa-pen-to-square"></i>Edit
 														Content</button>
 													<button
-														class=" btn py-2 px-2 text-bg-warning border me-3 ">Reset</button>
+														class=" btn py-2 px-6 text-light bg-danger border me-3 ">Reset</button>
 
 												</div>
 
@@ -6466,24 +6279,24 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="col-6 d-flex flex-column mb-8 fv-row">
 													<!--begin::Label-->
 													<label class="d-flex align-items-center fw-medium mb-2">
-														<span class="text-gray-500">Franchise Page Meta
-															Description 123</span>
+														<span class="text-gray-700 fw-bold fs-6">Franchise Page Meta
+															Description</span>
 													</label>
 													<!--end::Label-->
 													<input type="text"
-														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 														placeholder="Franchise Page Meta Description"
 														name="Franchise page meta description" />
 												</div>
 												<div class="col-6 d-flex flex-column mb-8 fv-row">
 													<!--begin::Label-->
 													<label class="d-flex align-items-center fw-medium mb-2">
-														<span class="text-gray-500">Franchise Page Meta
+														<span class="text-gray-700 fw-bold fs-6">Franchise Page Meta
 															Description</span>
 													</label>
 													<!--end::Label-->
 													<input type="text"
-														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 														placeholder="Franchise Page Meta Description"
 														name="Franchise page meta description" />
 												</div>
@@ -6492,12 +6305,12 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="col d-flex flex-column mb-8 fv-row">
 													<!--begin::Label-->
 													<label class="d-flex align-items-center fw-medium mb-2">
-														<span class="text-gray-500">Franchise Page Meta
+														<span class="text-gray-700 fw-bold fs-6">Franchise Page Meta
 															Description</span>
 													</label>
 													<!--end::Label-->
 													<input type="text"
-														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														class="form-control form-control-solid text-secondary-emhphasis border-1 border-gray-600 check"
 														placeholder="Franchise Page Meta Description"
 														name="Franchise page meta description" />
 												</div>
@@ -6506,59 +6319,67 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="col d-flex flex-column mb-8 fv-row">
 													<!--begin::Label-->
 													<label class="d-flex align-items-center fw-medium mb-2">
-														<span class="text-gray-500">Franchise Page Meta
+														<span class="text-gray-700 fw-bold fs-6">Franchise Page Meta
 															Description</span>
 													</label>
 													<!--end::Label-->
 													<input type="text"
-														class="form-control form-control-solid text-black bg-white border-1 border-gray-600 check"
+														class="form-control form-control-solid text-secondary-emphasis bg-white border-1 border-gray-600 check"
 														placeholder="Franchise Page Meta Description"
 														name="Franchise page meta description" />
 												</div>
 											</div>
-
-											<div class="d-flex justify-content-between align-items-center ">
-												<div class="d-flex flex-column mx-5">
-													<div class="text-gray-800">Hide Birthday Parties<input
-															class=" ms-2 form-check-input" type="checkbox" role="switch"
-															id="flexSwitchCheckDefault"></div>
-
+										<div class="row px-5 mb-5">
+											<div class="col-6">
+													<div class="text-gray-700 fw-bold fs-6 mx-5">Hide Birthday Parties</div>
 												</div>
-												<div class="d-flex flex-column mx-5">
-													<div class="text-gray-800">Excluded This Programme from my
-														franchaise<input class=" ms-2 form-check-input" type="checkbox"
-															role="switch" id="flexSwitchCheckDefault"></div>
-
+													<div class="col-6 d-flex">
+														<input
+															class="ms-auto form-check-input" type="checkbox" role="switch"
+															id="flexSwitchCheckDefault">
+													</div>
+										</div>
+										<div class="row px-5 mb-5">
+											<div class="col-6">
+													<div class="text-gray-700 fw-bold fs-6 mx-5">Hide Birthday Parties</div>
 												</div>
-											</div>
-											<div class="d-flex justify-content-between align-items-center mt-5">
-												<div class="d-flex flex-column mx-5">
-													<div class="text-gray-800">Hide Birthday Parties<input
-															class=" ms-2 form-check-input" type="checkbox" role="switch"
-															id="flexSwitchCheckDefault"></div>
+													<div class="col-6 d-flex">
+														<input
+															class="ms-auto form-check-input" type="checkbox" role="switch"
+															id="flexSwitchCheckDefault">
+													</div>
+										</div>
 
+										<div class="row px-5 mb-5">
+											<div class="col-6">
+													<div class="text-gray-700 fw-bold fs-6 mx-5">Hide Birthday Parties</div>
 												</div>
-												<div class="d-flex gap-2 me-10">
-													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+													<div class="col-6 d-flex">
+														<input
+															class="ms-auto form-check-input" type="checkbox" role="switch"
+															id="flexSwitchCheckDefault">
+													</div>
+										</div>
+										<div class="d-flex justify-content-end  gap-2 ">
+													<button class=" btn text-light bg-primary py-2 px-6 "><i class="fa-regular text-light fa-pen-to-square"></i>Edit
 														Content</button>
 													<button
-														class=" btn py-2 px-2 text-bg-warning border me-3 ">Reset</button>
+														class=" btn py-2 px-6 text-light bg-danger  mx-5">Reset</button>
 												</div>
 
-											</div>
-											<div class="d-flex justify-content-end mt-4 gap-7 me-5">
+											<div class="d-flex justify-content-between mt-4 gap-2">
 												<button
-													class=" btn  text-danger py-4 px-10 border border-danger  ">Cancle</button>
+													class=" btn  text-danger py-2 px-10 border border-danger mx-5">Cancle</button>
 												<button
-													class=" btn py-4 px-10 text-bg-danger border me-3 ">Save</button>
+													class=" btn py-2 px-10 bg-primary text-light  mx-5 ">Save</button>
 											</div>
 											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6569,13 +6390,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6586,13 +6407,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6603,13 +6424,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6620,13 +6441,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6637,13 +6458,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6654,13 +6475,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6671,14 +6492,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6689,13 +6509,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6706,13 +6526,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6723,13 +6543,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6740,13 +6560,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6757,13 +6577,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6774,13 +6594,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6791,13 +6611,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6808,13 +6628,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6825,13 +6645,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6842,13 +6662,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6859,13 +6679,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6876,13 +6696,13 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
-											<hr class="my-5" style="border-top: 3px solid #777777;" />
-											<div class="my-5">
+											<hr class="my-5" style="border-top: 3px dashed #777777;" />
+											<div class="my-5 mx-5">
 												<div class="d-flex justify-content-between">
-													<p class=" mt-3">Privacy Policy</p>
+													<p class=" mt-3 text-gray-700 fw-bold fs-6">Privacy Policy</p>
 													<div class="d-flex  ">
-														<p class=" mt-3">Create Franchise Privacy Policy</p>
-														<div class="form-check form-switch my-auto">
+														<p class=" mt-3 me-2 text-gray-700 fw-bold fs-6">Create Franchise Privacy Policy</p>
+														<div class="form-check form-switch mt-3 ">
 
 															<input class="form-check-input" type="checkbox"
 																role="switch" id="flexSwitchCheckDefault">
@@ -6893,6 +6713,7 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 
 											</div>
+											
 										</div>
 									</div>
 
@@ -6925,12 +6746,14 @@ License: For each use you must have a valid license purchased only from above li
 														</td>
 														<td class="">Birthday Party</td>
 														<td class="">
-															<input class="front-form-check-input" type="checkbox"
-																value="">
+															<input
+															class=" ms-auto form-check-input" type="checkbox" role="switch"
+															id="flexSwitchCheckDefault" style="height:15px;width: 15px;">
 														</td>
 														<td class="">
-															<input class="back-form-check-input" type="checkbox"
-																value="">
+															<input
+															class="ms-auto form-check-input" type="checkbox" role="switch"
+															id="flexSwitchCheckDefault"style="height:15px;width: 15px;">
 														</td>
 														<td class="">Franchise Owner</td>
 														<td>
@@ -6954,12 +6777,14 @@ License: For each use you must have a valid license purchased only from above li
 														</td>
 														<td class="">Birthday Party</td>
 														<td class="">
-															<input class="front-form-check-input" type="checkbox"
-																value="">
+															<input
+															class="ms-auto form-check-input" type="checkbox" role="switch"
+															id="flexSwitchCheckDefault"style="height:15px;width: 15px;">
 														</td>
 														<td class="">
-															<input class="back-form-check-input" type="checkbox"
-																value="">
+															<input
+															class="ms-auto form-check-input" type="checkbox" role="switch"
+															id="flexSwitchCheckDefault"style="height:15px;width: 15px;">
 														</td>
 														<td class="">Franchise Owner</td>
 														<td>
@@ -6983,12 +6808,14 @@ License: For each use you must have a valid license purchased only from above li
 														</td>
 														<td class="">Birthday Party</td>
 														<td class="">
-															<input class="front-form-check-input" type="checkbox"
-																value="">
+															<input
+															class="ms-auto form-check-input" type="checkbox" role="switch"
+															id="flexSwitchCheckDefault"style="height:15px;width: 15px;">
 														</td>
 														<td class="">
-															<input class="back-form-check-input" type="checkbox"
-																value="">
+															<input
+															class="ms-auto form-check-input" type="checkbox" role="switch"
+															id="flexSwitchCheckDefault"style="height:15px;width: 15px;">
 														</td>
 														<td class="">Franchise Owner</td>
 														<td>
@@ -7302,6 +7129,18 @@ License: For each use you must have a valid license purchased only from above li
 						allBlocks[i].classList.add('active');
 
 					}
+
+					//KD fileupload
+					const fileUploadInput = document.getElementById('file-upload');
+    				const fileUploadLabel = document.querySelector('.file-upload-label');
+    
+					fileUploadInput.addEventListener('change', function() {
+						if (this.files && this.files.length > 0) {
+							fileUploadLabel.textContent = this.files[0].name;
+						} else {
+							fileUploadLabel.textContent = 'Choose File';
+						}
+					});
 				</script>
 
 
