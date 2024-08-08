@@ -48,9 +48,7 @@ License: For each use you must have a valid license purchased only from above li
 			overflow-x: scroll;
 		}
 
-		.toolbar .dropdown-toggle::after {
-			display: none;
-		}
+
 
 		.toolbar button,
 		.toolbar .dropdown-toggle {
@@ -80,6 +78,28 @@ License: For each use you must have a valid license purchased only from above li
 		.active-format {
 			background-color: #e9ecef;
 		}
+
+		.setting-toggle-option {
+			background-color: gray;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		.setting-toggle-option.active {
+			background-color: aquamarine;
+			color: white
+		}
+
+		.setting-right-block {
+			display: none;
+		}
+
+		.setting-right-block.active {
+			display: block;
+		}
+
+		.check {
+			color: red;
+		}
 	</style>
 
 
@@ -97,7 +117,7 @@ License: For each use you must have a valid license purchased only from above li
 	<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
 	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="styles/setting.css" rel="stylesheet" type="text/css" />
+	<!-- <link href="styles/setting.css" rel="stylesheet" type="text/css" /> -->
 	<!--end::Global Stylesheets Bundle-->
 	<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
 </head>
@@ -5678,7 +5698,7 @@ License: For each use you must have a valid license purchased only from above li
 						<div class="row gx-10 mb-3 h-100">
 
 							<!--Left Section-->
-							<div class="col-xl-6 col-12 h-100 bg-gray-900">
+							<div class="col-xl-6 col-12 h-100 ">
 								<div
 									class="card card-flush h-100 d-flex flex-column overflow-scroll mb-3 position-relative mx-0">
 									<p class="text-start m-2 fw-bold "> <span
@@ -5693,18 +5713,18 @@ License: For each use you must have a valid license purchased only from above li
 													<label for="additionalFeeLabel" class="form-label">Additional Fee
 														Label</label>
 													<input type="text" class="form-control" id="additionalFeeLabel"
-														placeholder="Enter additional fee label">
+														placeholder=" Additional fee label">
 												</div>
 
 												<div class="form-group">
 													<div class="d-flex justify-content-between">
-														<label for="policy">Policy</label>
+														<label for="policy" class="fs-bold fs-7">Policy</label>
 														<div class="d-flex">
 															<label class="form-check-label"
 																for="flexSwitchCheckDefault me-2">Use B4K Policy</label>
 															<div class="form-check form-switch my-auto">
 
-																<input class="form-check-input" type="checkbox"
+																<input class="form-check-input " type="checkbox"
 																	role="switch" id="flexSwitchCheckDefault">
 
 															</div>
@@ -5842,7 +5862,8 @@ License: For each use you must have a valid license purchased only from above li
 														<p class=" mt-3">Additional Payment Information</p>
 														<div class="d-flex  ">
 															<p class=" mt-3">Used Added Payment Information</p>
-															<div class="form-check form-switch my-auto">
+															<div class="form-check form-switch my-auto"
+																style="color: (220, 42, 78)">
 
 																<input class="form-check-input" type="checkbox"
 																	role="switch" id="flexSwitchCheckDefault">
@@ -6017,8 +6038,8 @@ License: For each use you must have a valid license purchased only from above li
 																		Credential</button>
 																</div>
 																<div class="col-6 text-end">
-																	<button type="button"
-																		class="btn   text-bg-danger ">save</button>
+																	<button type="button" class="btn  text-light  px-15"
+																		style="background-color:rgb(220, 42, 78)">Save</button>
 																</div>
 															</div>
 
@@ -6042,9 +6063,9 @@ License: For each use you must have a valid license purchased only from above li
 														</div>
 														<div class="d-flex justify-content-end mt-4 gap-4">
 															<button
-																class=" btn  text-danger py-4 px-6 border border-danger  ">Cancle</button>
-															<button
-																class=" btn py-4 px-8 text-bg-danger border me-3 ">Save</button>
+																class=" btn  text-danger  px-15 border border-danger  ">Cancle</button>
+															<button class=" btn  px-15 text-white border me-3 "
+																style="background-color: rgb(220, 42, 78)">Save</button>
 														</div>
 													</div>
 												</div>
@@ -6296,107 +6317,99 @@ License: For each use you must have a valid license purchased only from above li
 														placeholder="Franchise Page Meta Description"
 														name="Franchise page meta description" />
 												</div>
+											</div>
 
-												<hr class="my-5" style="border-top: 3px solid #777777;" />
-												<label class="my-2 text-gray-500 text-solid">Mailing List Subcription
-													Settings</label>
+											<hr class="my-5" style="border-top: 3px solid #777777;" />
+											<label class="my-2 text-gray-500 text-solid">Mailing List Subcription
+												Settings</label>
 
-												<div class="d-flex justify-content-between align-items-center my-5">
-													<div class="d-flex flex-column mx-5">
-														<div class="text-gray-800">Hide Birthday Parties</div>
-														<div class="text-gray-500">(Check box if you donot want to s is
-															the )</div>
-													</div>
-													<div>
-														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
-															Content</button>
-														<button
-															class=" btn py-2 px-2 text-bg-warning border me-3 ">Reset</button>
-
-													</div>
-
+											<div class="d-flex justify-content-between align-items-center my-5">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is
+														the )</div>
 												</div>
-												<div class="d-flex justify-content-between align-items-center my-5">
-													<div class="d-flex flex-column mx-5">
-														<div class="text-gray-800">Hide Birthday Parties</div>
-														<div class="text-gray-500">(Check box if you donot want to s is
-															the )</div>
-													</div>
-													<div>
-														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
-															Content</button>
-
-
-													</div>
-
-												</div>
-												<div class="d-flex justify-content-between align-items-center my-5">
-													<div class="d-flex flex-column mx-5">
-														<div class="text-gray-800">Hide Birthday Parties</div>
-														<div class="text-gray-500">(Check box if you donot want to s is
-															the )</div>
-													</div>
-													<div>
-														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
-															Content</button>
-
-
-													</div>
-
-												</div>
-												<div class="d-flex justify-content-between align-items-center my-5">
-													<div class="d-flex flex-column mx-5">
-														<div class="text-gray-800">Hide Birthday Parties</div>
-														<div class="text-gray-500">(Check box if you donot want to s is
-															the )</div>
-													</div>
-													<div>
-														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
-															Content</button>
-
-
-													</div>
-
-												</div>
-												<div class="d-flex justify-content-between align-items-center my-5">
-													<div class="d-flex flex-column mx-5">
-														<div class="text-gray-800">Hide Birthday Parties</div>
-														<div class="text-gray-500">(Check box if you donot want to s is
-															the )</div>
-													</div>
-													<div>
-														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
-															Content</button>
-
-
-													</div>
-
-												</div>
-												<div class="d-flex justify-content-between align-items-center my-5">
-													<div class="d-flex flex-column mx-5">
-														<div class="text-gray-800">Hide Birthday Parties</div>
-														<div class="text-gray-500">(Check box if you donot want to s is
-															the )</div>
-													</div>
-													<div>
-														<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
-															Content</button>
-
-													</div>
+												<div>
+													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+														Content</button>
+													<button
+														class=" btn py-2 px-2 text-bg-warning border me-3 ">Reset</button>
 
 												</div>
 
 											</div>
+											<div class="d-flex justify-content-between align-items-center my-5">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is
+														the )</div>
+												</div>
+												<div>
+													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+														Content</button>
+
+
+												</div>
+
+											</div>
+											<div class="d-flex justify-content-between align-items-center my-5">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is
+														the )</div>
+												</div>
+												<div>
+													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+														Content</button>
+
+
+												</div>
+
+											</div>
+											<div class="d-flex justify-content-between align-items-center my-5">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is
+														the )</div>
+												</div>
+												<div>
+													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+														Content</button>
+												</div>
+											</div>
+											<div class="d-flex justify-content-between align-items-center my-5">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is
+														the )</div>
+												</div>
+												<div>
+													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+														Content</button>
+
+
+												</div>
+
+											</div>
+											<div class="d-flex justify-content-between align-items-center my-5">
+												<div class="d-flex flex-column mx-5">
+													<div class="text-gray-800">Hide Birthday Parties</div>
+													<div class="text-gray-500">(Check box if you donot want to s is
+														the )</div>
+												</div>
+												<div>
+													<button class=" btn  text-bg-success py-2 px-4 border   ">Edit
+														Content</button>
+
+												</div>
+
+											</div>
+
 											<div class="d-flex justify-content-end mt-4 gap-4">
 												<button
 													class=" btn  text-danger py-4 px-6 border border-danger  ">Cancle</button>
 												<button class=" btn py-4 px-8 text-bg-danger border me-3 ">Save</button>
 											</div>
-
-
-
-
-
 										</form>
 									</div>
 
